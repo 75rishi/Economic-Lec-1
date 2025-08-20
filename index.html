@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aurangzeb Quiz Application</title>
+    <title> "Economic" Quiz </title>
+    
     <style>
         /* General Reset and Base Styles */
         * {
@@ -71,7 +72,7 @@
         @keyframes pulse {
             0% { box-shadow: 0 0 50px rgb(0, 255, 0); }
             50% { box-shadow: 0 0 100px rgb(255, 0, 0); }
-            100% { box-shadow: 0 0 50px rgb(104, 61, 82); }
+            100% { box-shadow: 0 0 50px rgb(0, 21, 252); }
         }
 
         .loading-text {
@@ -99,8 +100,8 @@
 
         /* Quiz Page Styles */
         #quizPage {
-            background: linear-gradient(135deg, #452c4753, #13a155);
-            color: #000000;
+            background: linear-gradient(135deg, #09287e, #13a155);
+            color: #000;
             position: relative;
             min-height: 100vh;
             display: none;
@@ -113,9 +114,9 @@
         }
 
        .card {
-    background: linear-gradient(135deg, #91b9d8, #83b1a8, #b8afed);
+    background: linear-gradient(135deg, #258cdf, #a2d9ce, #03b0c7);
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgb(183, 56, 56);
+    box-shadow: 0 4px 12px rgba(100, 46, 46, 0.2);
     padding: 20px;
     margin-bottom: 30px;
     transition: transform 0.2s;
@@ -135,7 +136,7 @@
         .question .en {
             font-size: 1.1rem;
             font-weight: 500;
-            color: #000000;
+            color: #333;
             margin-top: 5px;
         }
 
@@ -164,11 +165,10 @@
         }
 
         .options button.correct {
-            background: #6cff5e !important;
-            border-color: #ae00ff !important;
+            background: #d4f5d0 !important;
+            border-color: #4caf50 !important;
             cursor: default;
             color: #000 !important;
-             font-weight: bold;
         }
 
         .options button.wrong {
@@ -238,8 +238,8 @@
         .explanation {
             margin-top: 10px;
             padding: 10px;
-            background: #89b2f4;
-            border-left: 4px solid #000000;
+            background: #8eedce;
+            border-left: 4px solid #0037ff;
             font-size: 0.95rem;
             animation: slideDown 0.4s ease;
             opacity: 0;
@@ -277,7 +277,7 @@
             width: 40px;
             height: 40px;
             border-radius: 50%;
-            background: #3e5a52;
+            background: #01130e;
             position: absolute;
             top: -16px;
             right: -20px;
@@ -461,7 +461,11 @@
         .dash-box:nth-child(28) { background: linear-gradient(45deg, #706fd3, #ff4d4d, #00d2d3); animation-delay: 5.4s; }
         .dash-box:nth-child(29) { background: linear-gradient(45deg, #feca57, #9980fa, #ff9ff3); animation-delay: 5.6s; }
         .dash-box:nth-child(30) { background: linear-gradient(45deg, #54a0ff, #ff793f, #ff6b6b); animation-delay: 5.8s; }
-
+        .dash-box:nth-child(31) { background: linear-gradient(45deg, #706fd3, #ff6b6b, #54a0ff); animation-delay: 3s; }
+        .dash-box:nth-child(32) { background: linear-gradient(45deg, #ff4d4d, #9980fa, #00d2d3); animation-delay: 3.2s; }
+        .dash-box:nth-child(33) { background: linear-gradient(45deg, #ffcc99, #ff9ff3, #4834d4); animation-delay: 3.4s; }
+        .dash-box:nth-child(34) { background: linear-gradient(45deg, #1dd1a1, #ff793f, #706fd3); animation-delay: 3.6s; }
+        
         .dash-box:hover {
             transform: scale(1.15) translateY(-10px);
             box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
@@ -542,7 +546,7 @@
             <div id="timerBar"><div id="timerBarFill"></div></div>
         </div>
         <div class="container" id="quizContainer">
-            <h1>Modern His Lec - 2 </h1>
+            <h1> Lec 1 "Economic"  Quiz</h1>
             <div id="score"></div>
             <div class="progress">
                 <div class="progress-bar" id="progressBar"></div>
@@ -580,758 +584,912 @@
     <script>
         const questions = [
     // Very Hard Questions (1-15)
-        
-    // Fact-based Questions (20 Questions)
-    {
-        "level": "Fact-based",
-        "q": "मिश्रित अर्थव्यवस्था किसका मिश्रण है?",
-        "q_en": "What is a Mixed Economy a combination of?",
-        "options": ["साम्यवाद और पूँजीवाद", "साम्यवाद और सामंतवाद", "पूँजीवाद और सामंतवाद", "साम्यवाद और लोकतंत्र"],
-        "options_en": ["Socialism and Capitalism", "Socialism and Feudalism", "Capitalism and Feudalism", "Socialism and Democracy"],
-        "answer": 1,
-        "explanation": "नोट्स के अनुसार, मिश्रित अर्थव्यवस्था साम्यवादी (Socialist) और पूँजीवादी (Capitalist) अर्थव्यवस्था का मिश्रण है।",
-        "explanation_en": "According to the notes, a Mixed Economy is a combination of Socialist and Capitalist economies."
-    },
-    {
-        "level": "Fact-based",
-        "q": "साम्यवादी अर्थव्यवस्था में साधनों पर किसका अधिकार होता है?",
-        "q_en": "Who has control over resources in a Socialist economy?",
-        "options": ["निजी क्षेत्र", "सरकार", "विदेशी व्यापार", "उपभोक्ता"],
-        "options_en": ["Private Sector", "Government", "Foreign Trade", "Consumers"],
-        "answer": 2,
-        "explanation": "नोट्स में उल्लेख है कि साम्यवादी अर्थव्यवस्था में प्राकृतिक, औद्योगिक और मानव संसाधनों पर सरकार का अधिकार होता है।",
-        "explanation_en": "The notes mention that in a Socialist economy, the government has control over natural, industrial, and human resources."
-    },
-    {
-        "level": "Fact-based",
-        "q": "उत्पादन के कितने प्रमुख कारक हैं?",
-        "q_en": "How many major Factors of Production are there?",
-        "options": ["2", "3", "4", "5"],
-        "options_en": ["2", "3", "4", "5"],
-        "answer": 3,
-        "explanation": "नोट्स के अनुसार, उत्पादन के चार प्रमुख कारक हैं: उद्यमी, भूमि, श्रम, और पूँजी।",
-        "explanation_en": "According to the notes, there are four major Factors of Production: Entrepreneur, Land, Labor, and Capital."
-    },
-    {
-        "level": "Fact-based",
-        "q": "उद्यमी को उत्पादन के कारक के बदले क्या प्राप्त होता है?",
-        "q_en": "What does an Entrepreneur receive as payment for the Factor of Production?",
-        "options": ["किराया", "लाभ", "ब्याज", "मजदूरी"],
-        "options_en": ["Rent", "Profit", "Interest", "Wages"],
-        "answer": 2,
-        "explanation": "नोट्स में स्पष्ट है कि उद्यमी को लाभ प्राप्त होता है।",
-        "explanation_en": "The notes clearly state that an Entrepreneur receives Profit."
-    },
-    {
-        "level": "Fact-based",
-        "q": "साम्यवादी अर्थव्यवस्था का मुख्य उद्देश्य क्या है?",
-        "q_en": "What is the main objective of a Socialist economy?",
-        "options": ["लाभ अधिकतम करना", "सामाजिक कल्याण", "निजी संपत्ति बढ़ाना", "विदेशी व्यापार"],
-        "options_en": ["Maximizing Profit", "Social Welfare", "Increasing Private Property", "Foreign Trade"],
-        "answer": 2,
-        "explanation": "नोट्स में उल्लेख है कि साम्यवादी अर्थव्यवस्था का मुख्य उद्देश्य सामाजिक कल्याण है।",
-        "explanation_en": "The notes mention that the main objective of a Socialist economy is Social Welfare."
-    },
-    {
-        "level": "Fact-based",
-        "q": "दो-क्षेत्रीय मॉडल में कौन-से दो मुख्य घटक शामिल हैं?",
-        "q_en": "Which two main components are included in the Two-Sector Model?",
-        "options": ["सरकार और विदेशी व्यापार", "घर-परिवार और उत्पादक इकाई", "निजी क्षेत्र और सार्वजनिक क्षेत्र", "उपभोक्ता और सरकार"],
-        "options_en": ["Government and Foreign Trade", "Households and Firms", "Private Sector and Public Sector", "Consumers and Government"],
-        "answer": 2,
-        "explanation": "नोट्स के अनुसार, दो-क्षेत्रीय मॉडल में घर-परिवार (Household) और उत्पादक इकाई (Firm) शामिल हैं।",
-        "explanation_en": "According to the notes, the Two-Sector Model includes Households and Firms."
-    },
-    {
-        "level": "Fact-based",
-        "q": "वास्तविक प्रवाह (Real Flow) में क्या शामिल होता है?",
-        "q_en": "What is included in Real Flow?",
-        "options": ["धन का लेन-देन", "वस्तुओं और सेवाओं का प्रवाह", "कर और सब्सिडी", "विदेशी मुद्रा"],
-        "options_en": ["Monetary Transactions", "Flow of Goods and Services", "Taxes and Subsidies", "Foreign Currency"],
-        "answer": 2,
-        "explanation": "नोट्स में कहा गया है कि वास्तविक प्रवाह में घर-परिवार से उत्पादन के कारक और फर्म से वस्तुएँ व सेवाएँ शामिल हैं।",
-        "explanation_en": "The notes state that Real Flow includes Factors of Production from Households and Goods and Services from Firms."
-    },
-    {
-        "level": "Fact-based",
-        "q": "चार-क्षेत्रीय मॉडल में कौन-सा क्षेत्र शामिल नहीं है?",
-        "q_en": "Which sector is not included in the Four-Sector Model?",
-        "options": ["घर-परिवार", "सरकार", "विदेशी व्यापार", "गैर-लाभकारी संगठन"],
-        "options_en": ["Households", "Government", "Foreign Trade", "Non-Profit Organizations"],
-        "answer": 4,
-        "explanation": "नोट्स के अनुसार, चार-क्षेत्रीय मॉडल में घर-परिवार, फर्म, सरकार, और विदेशी व्यापार शामिल हैं।",
-        "explanation_en": "According to the notes, the Four-Sector Model includes Households, Firms, Government, and Foreign Trade."
-    },
-    {
-        "level": "Fact-based",
-        "q": "GDP को मापने की कितनी प्रमुख विधियाँ हैं?",
-        "q_en": "How many major methods are there to measure GDP?",
-        "options": ["2", "3", "4", "5"],
-        "options_en": ["2", "3", "4", "5"],
-        "answer": 2,
-        "explanation": "नोट्स में उल्लेख है कि GDP को मापने की तीन विधियाँ हैं: आय विधि, व्यय विधि, और मूल्य वर्धन विधि।",
-        "explanation_en": "The notes mention that there are three methods to measure GDP: Income Method, Expenditure Method, and Value-Added Method."
-    },
-    {
-        "level": "Fact-based",
-        "q": "निजी क्षेत्र की पूँजीवादी अर्थव्यवस्था में मुख्य भूमिका क्या है?",
-        "q_en": "What is the main role of the private sector in a Capitalist economy?",
-        "options": ["सामाजिक कल्याण", "उत्पादन", "कर संग्रहण", "नीति निर्माण"],
-        "options_en": ["Social Welfare", "Production", "Tax Collection", "Policy Making"],
-        "answer": 2,
-        "explanation": "नोट्स के अनुसार, पूँजीवादी अर्थव्यवस्था में उत्पादन का कार्य मुख्य रूप से निजी क्षेत्र द्वारा किया जाता है।",
-        "explanation_en": "According to the notes, production is primarily undertaken by the private sector in a Capitalist economy."
-    },
-    {
-        "level": "Fact-based",
-        "q": "आयात करने से क्या प्रभाव पड़ता है?",
-        "q_en": "What is the effect of Imports?",
-        "options": ["राष्ट्रीय आय बढ़ती है", "विदेशी मुद्रा बाहर जाती है", "राष्ट्रीय व्यय कम होता है", "निवेश बढ़ता है"],
-        "options_en": ["National Income Increases", "Foreign Currency Goes Out", "National Expenditure Decreases", "Investment Increases"],
-        "answer": 2,
-        "explanation": "नोट्स में उल्लेख है कि आयात से विदेशी मुद्रा बाहर जाती है, जिससे राष्ट्रीय व्यय में वृद्धि होती है, न कि आय में।",
-        "explanation_en": "The notes mention that imports lead to an outflow of foreign currency, increasing national expenditure, not income."
-    },
-    {
-        "level": "Fact-based",
-        "q": "निर्यात (Export) से क्या प्रभाव पड़ता है?",
-        "q_en": "What is the effect of Exports?",
-        "options": ["विदेशी मुद्रा बाहर जाती है", "राष्ट्रीय आय बढ़ती है", "राष्ट्रीय व्यय बढ़ता है", "कर संग्रहण कम होता है"],
-        "options_en": ["Foreign Currency Goes Out", "National Income Increases", "National Expenditure Increases", "Tax Collection Decreases"],
-        "answer": 2,
-        "explanation": "नोट्स के अनुसार, निर्यात से विदेशी मुद्रा अर्जित होती है, जिससे राष्ट्रीय आय बढ़ती है।",
-        "explanation_en": "According to the notes, exports earn foreign currency, increasing national income."
-    },
-    {
-        "level": "Fact-based",
-        "q": "मिश्रित अर्थव्यवस्था में नीति निर्माण का कार्य कौन करता है?",
-        "q_en": "Who is responsible for policy-making in a Mixed Economy?",
-        "options": ["निजी क्षेत्र", "सरकार", "विदेशी व्यापार", "उपभोक्ता"],
-        "options_en": ["Private Sector", "Government", "Foreign Trade", "Consumers"],
-        "answer": 2,
-        "explanation": "नोट्स में कहा गया है कि मिश्रित अर्थव्यवस्था में नीति निर्माण का कार्य सरकार द्वारा किया जाता है।",
-        "explanation_en": "The notes state that policy-making in a Mixed Economy is undertaken by the Government."
-    },
-    {
-        "level": "Fact-based",
-        "q": "उत्पादन के कारक के रूप में पूँजी के बदले क्या प्राप्त होता है?",
-        "q_en": "What is received in return for Capital as a Factor of Production?",
-        "options": ["लाभ", "ब्याज", "किराया", "मजदूरी"],
-        "options_en": ["Profit", "Interest", "Rent", "Wages"],
-        "answer": 2,
-        "explanation": "नोट्स के अनुसार, पूँजी के बदले ब्याज प्राप्त होता है।",
-        "explanation_en": "According to the notes, Interest is received in return for Capital."
-    },
-    {
-        "level": "Fact-based",
-        "q": "साम्यवादी अर्थव्यवस्था को अन्य किस नाम से जाना जाता है?",
-        "q_en": "What is another name for a Socialist economy?",
-        "options": ["बाजार अर्थव्यवस्था", "आदेशात्मक योजना", "मिश्रित अर्थव्यवस्था", "पूँजीवादी अर्थव्यवस्था"],
-        "options_en": ["Market Economy", "Command Economy", "Mixed Economy", "Capitalist Economy"],
-        "answer": 2,
-        "explanation": "नोट्स में साम्यवादी अर्थव्यवस्था को 'Command Economy' या 'आदेशात्मक योजना' कहा गया है।",
-        "explanation_en": "The notes refer to a Socialist economy as a 'Command Economy' or 'Imperative Planning'."
-    },
-    {
-        "level": "Fact-based",
-        "q": "दो-क्षेत्रीय मॉडल में मौद्रिक प्रवाह (Monetary Flow) में क्या शामिल है?",
-        "q_en": "What is included in Monetary Flow in the Two-Sector Model?",
-        "options": ["वस्तुओं और सेवाओं का प्रवाह", "उत्पादन के कारकों का मूल्य", "कर और सब्सिडी", "प्राकृतिक संसाधन"],
-        "options_en": ["Flow of Goods and Services", "Value of Factors of Production", "Taxes and Subsidies", "Natural Resources"],
-        "answer": 2,
-        "explanation": "नोट्स के अनुसार, मौद्रिक प्रवाह में फर्म द्वारा घर-परिवार को उत्पादन के कारकों (वेतन, ब्याज, किराया, लाभ) का भुगतान और घर-परिवार द्वारा वस्तुओं और सेवाओं की कीमत का भुगतान शामिल है।",
-        "explanation_en": "According to the notes, Monetary Flow includes payments by Firms to Households for Factors of Production (wages, interest, rent, profit) and payments by Households for goods and services."
-    },
-    {
-        "level": "Fact-based",
-        "q": "चार-क्षेत्रीय मॉडल में सरकार घर-परिवार को क्या प्रदान करती है?",
-        "q_en": "What does the government provide to households in the Four-Sector Model?",
-        "options": ["कर", "सब्सिडी और सेवाएँ", "निर्यात", "आयात"],
-        "options_en": ["Taxes", "Subsidies and Services", "Exports", "Imports"],
-        "answer": 2,
-        "explanation": "नोट्स में उल्लेख है कि सरकार घर-परिवार को सब्सिडी और सेवाएँ (जैसे शिक्षा, स्वास्थ्य, सुरक्षा) प्रदान करती है।",
-        "explanation_en": "The notes mention that the government provides subsidies and services (like education, health, security) to households."
-    },
-    {
-        "level": "Fact-based",
-        "q": "पूँजीवादी अर्थव्यवस्था का मुख्य उद्देश्य क्या है?",
-        "q_en": "What is the main objective of a Capitalist economy?",
-        "options": ["सामाजिक कल्याण", "लाभ अधिकतम करना", "कर संग्रहण", "नीति निर्माण"],
-        "options_en": ["Social Welfare", "Maximizing Profit", "Tax Collection", "Policy Making"],
-        "answer": 2,
-        "explanation": "नोट्स के अनुसार, पूँजीवादी अर्थव्यवस्था का मुख्य उद्देश्य लाभ को अधिकतम करना है।",
-        "explanation_en": "According to the notes, the main objective of a Capitalist economy is to maximize profit."
-    },
-    {
-        "level": "Fact-based",
-        "q": "मिश्रित अर्थव्यवस्था का उदाहरण कौन-सा देश है?",
-        "q_en": "Which country is an example of a Mixed Economy?",
-        "options": ["भारत", "क्यूबा", "उत्तर कोरिया", "संयुक्त राज्य अमेरिका"],
-        "options_en": ["India", "Cuba", "North Korea", "United States"],
-        "answer": 1,
-        "explanation": "नोट्स में भारत को मिश्रित अर्थव्यवस्था के उदाहरण के रूप में उल्लेख किया गया है।",
-        "explanation_en": "The notes mention India as an example of a Mixed Economy."
-    },
-    {
-        "level": "Fact-based",
-        "q": "आर्थिक प्रवाह में रिसाव (Leakage) का उदाहरण क्या है?",
-        "q_en": "What is an example of Leakage in economic flow?",
-        "options": ["निवेश", "बचत", "निर्यात", "सरकारी व्यय"],
-        "options_en": ["Investment", "Savings", "Exports", "Government Expenditure"],
-        "answer": 2,
-        "explanation": "नोट्स के अनुसार, बचत को रिसाव (Leakage) माना जाता है क्योंकि यह आर्थिक प्रवाह से बाहर जाती है।",
-        "explanation_en": "According to the notes, savings are considered a Leakage as they exit the economic flow."
-    },
-
-    // Medium Difficulty Questions (25 Questions)
-    {
-        "level": "Medium Difficulty",
-        "q": "मिश्रित अर्थव्यवस्था में संसाधनों का स्वामित्व किसके पास होता है?",
-        "q_en": "Who owns the resources in a Mixed Economy?",
-        "options": ["केवल सरकार", "केवल निजी क्षेत्र", "आंशिक रूप से सरकार और आंशिक रूप से निजी क्षेत्र", "केवल विदेशी व्यापार"],
-        "options_en": ["Only Government", "Only Private Sector", "Partially Government and Partially Private Sector", "Only Foreign Trade"],
-        "answer": 3,
-        "explanation": "नोट्स में कहा गया है कि मिश्रित अर्थव्यवस्था में संसाधनों का स्वामित्व आंशिक रूप से सरकार (जैसे खनिज, रेलवे) और आंशिक रूप से निजी व्यक्तियों/कंपनियों (जैसे कृषि भूमि, कारखाने) के पास होता है।",
-        "explanation_en": "The notes state that in a Mixed Economy, resources are owned partially by the government (e.g., minerals, railways) and partially by private individuals/companies (e.g., agricultural land, factories)."
-    },
-    {
-        "level": "Medium Difficulty",
-        "q": "दो-क्षेत्रीय मॉडल में वास्तविक और मौद्रिक प्रवाह की दिशा कैसी होती है?",
-        "q_en": "What is the direction of Real and Monetary Flow in the Two-Sector Model?",
-        "options": ["समान दिशा में", "विपरीत दिशा में", "कोई दिशा नहीं", "केवल एक दिशा में"],
-        "options_en": ["Same Direction", "Opposite Direction", "No Direction", "Only One Direction"],
-        "answer": 2,
-        "explanation": "नोट्स के अनुसार, वास्तविक और मौद्रिक प्रवाह एक-दूसरे के विपरीत दिशा में होते हैं।",
-        "explanation_en": "According to the notes, Real and Monetary Flows move in opposite directions."
-    },
-    {
-        "level": "Medium Difficulty",
-        "q": "चार-क्षेत्रीय मॉडल में विदेशी व्यापार से क्या संबंधित है?",
-        "q_en": "What is related to the Foreign Sector in the Four-Sector Model?",
-        "options": ["कर और सब्सिडी", "निर्यात और आयात", "वेतन और ब्याज", "शिक्षा और स्वास्थ्य"],
-        "options_en": ["Taxes and Subsidies", "Exports and Imports", "Wages and Interest", "Education and Health"],
-        "answer": 2,
-        "explanation": "नोट्स में उल्लेख है कि विदेशी व्यापार निर्यात और आयात से संबंधित है।",
-        "explanation_en": "The notes mention that the Foreign Sector is related to Exports and Imports."
-    },
-    {
-        "level": "Medium Difficulty",
-        "q": "साम्यवादी अर्थव्यवस्था में उत्पादन से संबंधित निर्णय कौन लेता है?",
-        "q_en": "Who makes decisions related to production in a Socialist economy?",
-        "options": ["निजी क्षेत्र", "उपभोक्ता", "सरकार", "विदेशी व्यापार"],
-        "options_en": ["Private Sector", "Consumers", "Government", "Foreign Trade"],
-        "answer": 3,
-        "explanation": "नोट्स के अनुसार, साम्यवादी अर्थव्यवस्था में क्या उत्पादन होगा, किसके लिए होगा, और मूल्य क्या होगा, यह सरकार द्वारा नियंत्रित होता है।",
-        "explanation_en": "According to the notes, in a Socialist economy, decisions regarding what to produce, for whom, and at what price are controlled by the government."
-    },
-    {
-        "level": "Medium Difficulty",
-        "q": "कुल आय (Y) का सूत्र क्या है?",
-        "q_en": "What is the formula for Total Income (Y)?",
-        "options": ["Y = C + I", "Y = C + I + G", "Y = C + I + G + (X – M)", "Y = C + G"],
-        "options_en": ["Y = C + I", "Y = C + I + G", "Y = C + I + G + (X – M)", "Y = C + G"],
-        "answer": 3,
-        "explanation": "नोट्स में कुल आय का सूत्र Y = C + I + G + (X – M) दिया गया है, जहाँ C = उपभोग, I = निवेश, G = सरकारी व्यय, X = निर्यात, और M = आयात।",
-        "explanation_en": "The notes provide the formula for Total Income as Y = C + I + G + (X – M), where C = Consumption, I = Investment, G = Government Expenditure, X = Exports, and M = Imports."
-    },
-    {
-        "level": "Medium Difficulty",
-        "q": "पूँजीवादी अर्थव्यवस्था में उत्पादन और मूल्य निर्धारण को कौन नियंत्रित करता है?",
-        "q_en": "Who controls production and pricing in a Capitalist economy?",
-        "options": ["सरकार", "बाजार", "उपभोक्ता", "विदेशी व्यापार"],
-        "options_en": ["Government", "Market", "Consumers", "Foreign Trade"],
-        "answer": 2,
-        "explanation": "नोट्स में कहा गया है कि पूँजीवादी अर्थव्यवस्था में उत्पादन और मूल्य निर्धारण माँग और आपूर्ति की शक्तियों द्वारा बाजार में तय होता है।",
-        "explanation_en": "The notes state that in a Capitalist economy, production and pricing are determined by the forces of demand and supply in the market."
-    },
-    {
-        "level": "Medium Difficulty",
-        "q": "मिश्रित अर्थव्यवस्था में PPP मॉडल का क्या अर्थ है?",
-        "q_en": "What does the PPP model mean in a Mixed Economy?",
-        "options": ["निजी उत्पादन योजना", "सार्वजनिक-निजी सहभागिता", "सामाजिक कल्याण योजना", "विदेशी व्यापार नीति"],
-        "options_en": ["Private Production Plan", "Public-Private Partnership", "Social Welfare Plan", "Foreign Trade Policy"],
-        "answer": 2,
-        "explanation": "नोट्स के अनुसार, PPP का अर्थ है Public Private Partnership, जो बुनियादी ढांचे जैसे सड़क, बिजली, शिक्षा आदि में लागू होता है।",
-        "explanation_en": "According to the notes, PPP stands for Public-Private Partnership, applied to infrastructure like roads, electricity, education, etc."
-    },
-    {
-        "level": "Medium Difficulty",
-        "q": "दो-क्षेत्रीय मॉडल में घर-परिवार फर्म को क्या प्रदान करते हैं?",
-        "q_en": "What do Households provide to Firms in the Two-Sector Model?",
-        "options": ["कर", "उत्पादन के कारक", "सब्सिडी", "निर्यात"],
-        "options_en": ["Taxes", "Factors of Production", "Subsidies", "Exports"],
-        "answer": 2,
-        "explanation": "नोट्स में उल्लेख है कि घर-परिवार फर्म को उत्पादन के कारक (भूमि, श्रम, पूँजी, उद्यमिता) प्रदान करते हैं।",
-        "explanation_en": "The notes mention that Households provide Firms with Factors of Production (land, labor, capital, entrepreneurship)."
-    },
-    {
-        "level": "Medium Difficulty",
-        "q": "चार-क्षेत्रीय मॉडल में सरकार फर्म को क्या प्रदान करती है?",
-        "q_en": "What does the Government provide to Firms in the Four-Sector Model?",
-        "options": ["वस्तुएँ और सेवाएँ", "सब्सिडी और सेवाएँ", "मजदूरी और लाभ", "आयात"],
-        "options_en": ["Goods and Services", "Subsidies and Services", "Wages and Profit", "Imports"],
-        "answer": 2,
-        "explanation": "नोट्स के अनुसार, सरकार फर्म को सब्सिडी और सेवाएँ (जैसे अवसंरचना) प्रदान करती है।",
-        "explanation_en": "According to the notes, the Government provides Firms with subsidies and services (e.g., infrastructure)."
-    },
-    {
-        "level": "Medium Difficulty",
-        "q": "प्रेषण आय (Remittances) का क्या अर्थ है?",
-        "q_en": "What is meant by Remittances?",
-        "options": ["विदेशी व्यापार से प्राप्त आय", "विदेश में कार्यरत नागरिकों द्वारा भेजी गई धनराशि", "सरकारी सब्सिडी", "निजी क्षेत्र का निवेश"],
-        "options_en": ["Income from Foreign Trade", "Money Sent by Citizens Working Abroad", "Government Subsidies", "Private Sector Investment"],
-        "answer": 2,
-        "explanation": "नोट्स में कहा गया है कि प्रेषण आय वह धनराशि है जो विदेश में कार्यरत नागरिक अपने देश को भेजते हैं।",
-        "explanation_en": "The notes state that remittances are the money sent by citizens working abroad to their home country."
-    },
-    {
-        "level": "Medium Difficulty",
-        "q": "आर्थिक प्रवाह में इंजेक्शन (Injection) का उदाहरण क्या है?",
-        "q_en": "What is an example of Injection in economic flow?",
-        "options": ["बचत", "कर", "निवेश", "आयात"],
-        "options_en": ["Savings", "Taxes", "Investment", "Imports"],
-        "answer": 3,
-        "explanation": "नोट्स के अनुसार, निवेश को आर्थिक प्रवाह में इंजेक्शन माना जाता है क्योंकि यह प्रवाह में धन जोड़ता है।",
-        "explanation_en": "According to the notes, investment is considered an Injection in economic flow as it adds money to the flow."
-    },
-    {
-        "level": "Medium Difficulty",
-        "q": "साम्यवादी अर्थव्यवस्था में संसाधनों का वितरण कौन नियंत्रित करता है?",
-        "q_en": "Who controls the distribution of resources in a Socialist economy?",
-        "options": ["निजी क्षेत्र", "सरकार", "उपभोक्ता", "बाजार"],
-        "options_en": ["Private Sector", "Government", "Consumers", "Market"],
-        "answer": 2,
-        "explanation": "नोट्स में उल्लेख है कि साम्यवादी अर्थव्यवस्था में संसाधनों का वितरण सरकार द्वारा नियंत्रित होता है।",
-        "explanation_en": "The notes mention that in a Socialist economy, the distribution of resources is controlled by the government."
-    },
-    {
-        "level": "Medium Difficulty",
-        "q": "चार-क्षेत्रीय मॉडल में घर-परिवार सरकार को क्या प्रदान करते हैं?",
-        "q_en": "What do Households provide to the Government in the Four-Sector Model?",
-        "options": ["सब्सिडी", "श्रम और कर", "निर्यात", "निवेश"],
-        "options_en": ["Subsidies", "Labor and Taxes", "Exports", "Investment"],
-        "answer": 2,
-        "explanation": "नोट्स के अनुसार, घर-परिवार सरकार को श्रम और कर प्रदान करते हैं।",
-        "explanation_en": "According to the notes, Households provide labor and taxes to the Government."
-    },
-    {
-        "level": "Medium Difficulty",
-        "q": "पूँजीवादी अर्थव्यवस्था में Laissez Faire नीति का क्या अर्थ है?",
-        "q_en": "What does the Laissez Faire policy mean in a Capitalist economy?",
-        "options": ["सरकारी हस्तक्षेप", "बाजार की स्वतंत्रता", "सामाजिक कल्याण", "कर संग्रहण"],
-        "options_en": ["Government Intervention", "Market Freedom", "Social Welfare", "Tax Collection"],
-        "answer": 2,
-        "explanation": "नोट्स में कहा गया है कि Laissez Faire का अर्थ है 'Let it be' या बाजार को स्वतंत्र रूप से कार्य करने देना।",
-        "explanation_en": "The notes state that Laissez Faire means 'Let it be' or allowing the market to operate freely."
-    },
-    {
-        "level": "Medium Difficulty",
-        "q": "मिश्रित अर्थव्यवस्था में संकेतमक नियोजन (Indicative Planning) का क्या अर्थ है?",
-        "q_en": "What does Indicative Planning mean in a Mixed Economy?",
-        "options": ["बाध्यकारी नियोजन", "निजी क्षेत्र को दिशा-निर्देश देना", "पूर्ण सरकारी नियंत्रण", "विदेशी व्यापार नीति"],
-        "options_en": ["Mandatory Planning", "Providing Guidelines to the Private Sector", "Full Government Control", "Foreign Trade Policy"],
-        "answer": 2,
-        "explanation": "नोट्स के अनुसार, संकेतमक नियोजन में सरकार निजी क्षेत्र को दिशा-निर्देश देती है, न कि बाध्यकारी नियोजन।",
-        "explanation_en": "According to the notes, Indicative Planning involves the government providing guidelines to the private sector, not mandatory planning."
-    },
-    {
-        "level": "Medium Difficulty",
-        "q": "उत्पादन के कारकों की आय मुख्य रूप से किस क्षेत्र के पास जाती है?",
-        "q_en": "To which sector does the income from Factors of Production primarily go?",
-        "options": ["सरकार", "घर-परिवार", "विदेशी व्यापार", "निजी क्षेत्र"],
-        "options_en": ["Government", "Households", "Foreign Trade", "Private Sector"],
-        "answer": 2,
-        "explanation": "नोट्स में उल्लेख है कि उत्पादन के कारकों की आय मुख्य रूप से घर-परिवार क्षेत्र के पास जाती है।",
-        "explanation_en": "The notes mention that the income from Factors of Production primarily goes to the Household sector."
-    },
-    {
-        "level": "Medium Difficulty",
-        "q": "दो-क्षेत्रीय मॉडल में फर्म घर-परिवार को क्या प्रदान करती है?",
-        "q_en": "What do Firms provide to Households in the Two-Sector Model?",
-        "options": ["कर", "वेतन, ब्याज, किराया, लाभ", "सब्सिडी", "निर्यात"],
-        "options_en": ["Taxes", "Wages, Interest, Rent, Profit", "Subsidies", "Exports"],
-        "answer": 2,
-        "explanation": "नोट्स के अनुसार, फर्म घर-परिवार को उत्पादन के कारकों के बदले वेतन, ब्याज, किराया, और लाभ प्रदान करती है।",
-        "explanation_en": "According to the notes, Firms provide Households with wages, interest, rent, and profit in return for Factors of Production."
-    },
-    {
-        "level": "Medium Difficulty",
-        "q": "चार-क्षेत्रीय मॉडल में फर्म सरकार को क्या प्रदान करती है?",
-        "q_en": "What do Firms provide to the Government in the Four-Sector Model?",
-        "options": ["वस्तुएँ और सेवाएँ", "कर", "सब्सिडी", "प्रेषण आय"],
-        "options_en": ["Goods and Services", "Taxes", "Subsidies", "Remittances"],
-        "answer": 2,
-        "explanation": "नोट्स में उल्लेख है कि फर्म सरकार को कर भुगतान करती हैं।",
-        "explanation_en": "The notes mention that Firms pay taxes to the Government."
-    },
-    {
-        "level": "Medium Difficulty",
-        "q": "मिश्रित अर्थव्यवस्था में सार्वजनिक और निजी क्षेत्र का क्या संबंध है?",
-        "q_en": "What is the relationship between the public and private sectors in a Mixed Economy?",
-        "options": ["प्रतिस्पर्धी", "पूरक", "स्वतंत्र", "विरोधी"],
-        "options_en": ["Competitive", "Complementary", "Independent", "Opposing"],
-        "answer": 2,
-        "explanation": "नोट्स के अनुसार, मिश्रित अर्थव्यवस्था में सार्वजनिक और निजी क्षेत्र एक-दूसरे के पूरक के रूप में सह-अस्तित्व में कार्य करते हैं।",
-        "explanation_en": "According to the notes, in a Mixed Economy, the public and private sectors work as complementary to each other."
-    },
-    {
-        "level": "Medium Difficulty",
-        "q": "आर्थिक प्रवाह में बचत को क्या माना जाता है?",
-        "q_en": "What is Saving considered in economic flow?",
-        "options": ["इंजेक्शन", "रिसाव", "निर्यात", "उपभोग"],
-        "options_en": ["Injection", "Leakage", "Exports", "Consumption"],
-        "answer": 2,
-        "explanation": "नोट्स में कहा गया है कि बचत को आर्थिक प्रवाह में रिसाव (Leakage) माना जाता है।",
-        "explanation_en": "The notes state that savings are considered a Leakage in economic flow."
-    },
-    {
-        "level": "Medium Difficulty",
-        "q": "GDP की गणना में कौन-सी विधि शामिल नहीं है?",
-        "q_en": "Which method is not included in the calculation of GDP?",
-        "options": ["आय विधि", "व्यय विधि", "मूल्य वर्धन विधि", "कर विधि"],
-        "options_en": ["Income Method", "Expenditure Method", "Value-Added Method", "Tax Method"],
-        "answer": 4,
-        "explanation": "नोट्स के अनुसार, GDP की गणना तीन विधियों से की जाती है: आय विधि, व्यय विधि, और मूल्य वर्धन विधि। कर विधि कोई मान्य विधि नहीं है।",
-        "explanation_en": "According to the notes, GDP is calculated using three methods: Income Method, Expenditure Method, and Value-Added Method. The Tax Method is not a valid method."
-    },
-    {
-        "level": "Medium Difficulty",
-        "q": "पूँजीवादी अर्थव्यवस्था में प्रभावी माँग (Effective Demand) का आधार क्या है?",
-        "q_en": "What is the basis of Effective Demand in a Capitalist economy?",
-        "options": ["सरकारी नीति", "क्रय शक्ति", "सामाजिक कल्याण", "कर संग्रहण"],
-        "options_en": ["Government Policy", "Purchasing Power", "Social Welfare", "Tax Collection"],
-        "answer": 2,
-        "explanation": "नोट्स में उल्लेख है कि पूँजीवादी अर्थव्यवस्था में प्रभावी माँग क्रय शक्ति पर आधारित होती है।",
-        "explanation_en": "The notes mention that Effective Demand in a Capitalist economy is based on purchasing power."
-    },
-    {
-        "level": "Medium Difficulty",
-        "q": "मिश्रित अर्थव्यवस्था में उत्पादन का कार्य कौन करता है?",
-        "q_en": "Who undertakes production in a Mixed Economy?",
-        "options": ["केवल सरकार", "केवल निजी क्षेत्र", "सरकार और निजी क्षेत्र दोनों", "केवल विदेशी व्यापार"],
-        "options_en": ["Only Government", "Only Private Sector", "Both Government and Private Sector", "Only Foreign Trade"],
-        "answer": 3,
-        "explanation": "नोट्स के अनुसार, मिश्रित अर्थव्यवस्था में उत्पादन का कार्य सरकार (सार्वजनिक क्षेत्र) और निजी क्षेत्र दोनों द्वारा किया जाता है।",
-        "explanation_en": "According to the notes, production in a Mixed Economy is undertaken by both the government (public sector) and the private sector."
-    },
-    {
-        "level": "Medium Difficulty",
-        "q": "चार-क्षेत्रीय मॉडल में विदेशी व्यापार से आय का उदाहरण क्या है?",
-        "q_en": "What is an example of income from the Foreign Sector in the Four-Sector Model?",
-        "options": ["कर", "विदेशी निवेश", "सब्सिडी", "वेतन"],
-        "options_en": ["Taxes", "Foreign Investment", "Subsidies", "Wages"],
-        "answer": 2,
-        "explanation": "नोट्स में उल्लेख है कि विदेशी निवेश और विदेशी परियोजनाओं से आय विदेशी व्यापार से आय के उदाहरण हैं।",
-        "explanation_en": "The notes mention that foreign investment and income from foreign projects are examples of income from the Foreign Sector."
-    },
-    {
-        "level": "Medium Difficulty",
-        "q": "आर्थिक स्थिरता बनाए रखना किसका मुख्य उद्देश्य है?",
-        "q_en": "Whose main objective is to maintain economic stability?",
-        "options": ["निजी क्षेत्र", "सरकार", "उपभोक्ता", "विदेशी व्यापार"],
-        "options_en": ["Private Sector", "Government", "Consumers", "Foreign Trade"],
-        "answer": 2,
-        "explanation": "नोट्स के अनुसार, सरकार का मुख्य उद्देश्य आर्थिक स्थिरता बनाए रखना और सार्वजनिक सेवाएँ प्रदान करना है।",
-        "explanation_en": "According to the notes, the main objective of the government is to maintain economic stability and provide public services."
-    },
-
-    // Confusing/Tricky Questions (10 Questions)
-    {
-        "level": "Confusing/Tricky",
-        "q": "यदि कोई देश केवल आयात करता है और निर्यात नहीं करता, तो राष्ट्रीय आय पर क्या प्रभाव पड़ेगा?",
-        "q_en": "If a country only imports and does not export, what will be the effect on National Income?",
-        "options": ["राष्ट्रीय आय बढ़ेगी", "राष्ट्रीय आय अपरिवर्तित रहेगी", "राष्ट्रीय आय कम होगी", "कोई प्रभाव नहीं"],
-        "options_en": ["National Income will Increase", "National Income will Remain Unchanged", "National Income will Decrease", "No Effect"],
-        "answer": 3,
-        "explanation": "नोट्स के अनुसार, आयात से विदेशी मुद्रा बाहर जाती है, जिससे राष्ट्रीय व्यय बढ़ता है, लेकिन राष्ट्रीय आय में कमी आती है क्योंकि इसमें निर्यात की आय शामिल नहीं होती। यह भ्रामक है क्योंकि आयात को कभी-कभी आय के रूप में गलत समझा जाता है।",
-        "explanation_en": "According to the notes, imports lead to an outflow of foreign currency, increasing national expenditure but decreasing National Income since export income is absent. This is tricky as imports are sometimes mistaken for income."
-    },
-    {
-        "level": "Confusing/Tricky",
-        "q": "दो-क्षेत्रीय मॉडल में यदि घर-परिवार बचत करते हैं, तो मौद्रिक प्रवाह पर क्या प्रभाव पड़ेगा?",
-        "q_en": "In the Two-Sector Model, if Households save, what will be the effect on Monetary Flow?",
-        "options": ["मौद्रिक प्रवाह बढ़ेगा", "मौद्रिक प्रवाह कम होगा", "मौद्रिक प्रवाह अपरिवर्तित रहेगा", "मौद्रिक प्रवाह बंद हो जाएगा"],
-        "options_en": ["Monetary Flow will Increase", "Monetary Flow will Decrease", "Monetary Flow will Remain Unchanged", "Monetary Flow will Stop"],
-        "answer": 2,
-        "explanation": "नोट्स में कहा गया है कि बचत को आर्थिक प्रवाह में रिसाव (Leakage) माना जाता है, जो मौद्रिक प्रवाह को कम करता है। यह भ्रामक है क्योंकि बचत को कभी-कभी निवेश के साथ जोड़ा जाता है।",
-        "explanation_en": "The notes state that savings are considered a Leakage in economic flow, reducing Monetary Flow. This is tricky as savings are sometimes confused with investment."
-    },
-    {
-        "level": "Confusing/Tricky",
-        "q": "साम्यवादी अर्थव्यवस्था में उत्पादन के कारकों की आय किसे प्राप्त होती है?",
-        "q_en": "Who receives the income from Factors of Production in a Socialist economy?",
-        "options": ["निजी क्षेत्र", "सरकार", "घर-परिवार", "विदेशी व्यापार"],
-        "options_en": ["Private Sector", "Government", "Households", "Foreign Trade"],
-        "answer": 3,
-        "explanation": "नोट्स के अनुसार, उत्पादन के कारकों की आय मुख्य रूप से घर-परिवार को प्राप्त होती है। यह भ्रामक है क्योंकि साम्यवादी अर्थव्यवस्था में सरकार का नियंत्रण होने के कारण लोग यह मान सकते हैं कि आय सरकार को जाती है।",
-        "explanation_en": "According to the notes, income from Factors of Production primarily goes to Households. This is tricky as people may assume it goes to the government due to its control in a Socialist economy."
-    },
-    {
-        "level": "Confusing/Tricky",
-        "q": "यदि सरकार सब्सिडी देती है, तो यह आर्थिक प्रवाह में क्या माना जाता है?",
-        "q_en": "If the government provides subsidies, what is it considered in economic flow?",
-        "options": ["रिसाव", "इंजेक्शन", "उपभोग", "कर"],
-        "options_en": ["Leakage", "Injection", "Consumption", "Taxes"],
-        "answer": 2,
-        "explanation": "नोट्स में कहा गया है कि सरकारी व्यय और सब्सिडी को आर्थिक प्रवाह में इंजेक्शन माना जाता है। यह भ्रामक है क्योंकि सब्सिडी को कभी-कभी व्यय के रूप में गलत समझा जाता है।",
-        "explanation_en": "The notes state that government expenditure and subsidies are considered Injections in economic flow. This is tricky as subsidies are sometimes mistaken for expenditure."
-    },
-    {
-        "level": "Confusing/Tricky",
-        "q": "पूँजीवादी अर्थव्यवस्था में यदि माँग बढ़ती है, तो क्या होगा?",
-        "q_en": "In a Capitalist economy, if demand increases, what will happen?",
-        "options": ["उत्पादन कम होगा", "उत्पादन बढ़ेगा", "कर बढ़ेगा", "सब्सिडी बढ़ेगी"],
-        "options_en": ["Production will Decrease", "Production will Increase", "Taxes will Increase", "Subsidies will Increase"],
-        "answer": 2,
-        "explanation": "नोट्स के अनुसार, पूँजीवादी अर्थव्यवस्था में माँग और आपूर्ति उत्पादन को नियंत्रित करती हैं। बढ़ती माँग से उत्पादन बढ़ता है। यह भ्रामक है क्योंकि लोग इसे सरकारी हस्तक्षेप से जोड़ सकते हैं।",
-        "explanation_en": "According to the notes, demand and supply control production in a Capitalist economy. Increased demand leads to increased production. This is tricky as people may link it to government intervention."
-    },
-    {
-        "level": "Confusing/Tricky",
-        "q": "चार-क्षेत्रीय मॉडल में यदि विदेशी व्यापार शून्य है, तो कुल आय का सूत्र क्या होगा?",
-        "q_en": "In the Four-Sector Model, if foreign trade is zero, what will be the formula for Total Income?",
-        "options": ["Y = C + I", "Y = C + I + G", "Y = C + G", "Y = C + I + G + X"],
-        "options_en": ["Y = C + I", "Y = C + I + G", "Y = C + G", "Y = C + I + G + X"],
-        "answer": 2,
-        "explanation": "नोट्स में कुल आय का सूत्र Y = C + I + G + (X – M) है। यदि विदेशी व्यापार (X – M) शून्य है, तो सूत्र Y = C + I + G रहता है। यह भ्रामक है क्योंकि लोग इसे दो-क्षेत्रीय मॉडल से जोड़ सकते हैं।",
-        "explanation_en": "The notes provide the formula for Total Income as Y = C + I + G + (X – M). If foreign trade (X – M) is zero, the formula becomes Y = C + I + G. This is tricky as people may confuse it with the Two-Sector Model."
-    },
-    {
-        "level": "Confusing/Tricky",
-        "q": "मिश्रित अर्थव्यवस्था में यदि निजी क्षेत्र उत्पादन बंद कर दे, तो क्या होगा?",
-        "q_en": "In a Mixed Economy, if the private sector stops production, what will happen?",
-        "options": ["सरकार उत्पादन करेगी", "राष्ट्रीय आय शून्य हो जाएगी", "विदेशी व्यापार बढ़ेगा", "उपभोग बंद हो जाएगा"],
-        "options_en": ["Government will Produce", "National Income will Become Zero", "Foreign Trade will Increase", "Consumption will Stop"],
-        "answer": 1,
-        "explanation": "नोट्स के अनुसार, मिश्रित अर्थव्यवस्था में उत्पादन का कार्य सरकार और निजी क्षेत्र दोनों द्वारा किया जाता है। यदि निजी क्षेत्र उत्पादन बंद करता है, तो सरकार उत्पादन जारी रख सकती है। यह भ्रामक है क्योंकि लोग सोच सकते हैं कि अर्थव्यवस्था पूरी तरह रुक जाएगी।",
-        "explanation_en": "According to the notes, production in a Mixed Economy is undertaken by both the government and private sector. If the private sector stops production, the government can continue producing. This is tricky as people may think the economy will completely halt."
-    },
-    {
-        "level": "Confusing/Tricky",
-        "q": "दो-क्षेत्रीय मॉडल में यदि घर-परिवार उपभोग बंद कर दें, तो क्या होगा?",
-        "q_en": "In the Two-Sector Model, if Households stop consumption, what will happen?",
-        "options": ["फर्म उत्पादन बंद कर देंगी", "मौद्रिक प्रवाह बढ़ेगा", "वास्तविक प्रवाह बढ़ेगा", "राष्ट्रीय आय बढ़ेगी"],
-        "options_en": ["Firms will Stop Production", "Monetary Flow will Increase", "Real Flow will Increase", "National Income will Increase"],
-        "answer": 1,
-        "explanation": "नोट्स के अनुसार, दो-क्षेत्रीय मॉडल में घर-परिवार द्वारा उपभोग फर्मों के उत्पादन को प्रेरित करता है। यदि उपभोग बंद हो जाता है, तो फर्म उत्पादन बंद कर देंगी। यह भ्रामक है क्योंकि लोग सोच सकते हैं कि प्रवाह अपरिवर्तित रहेगा।",
-        "explanation_en": "According to the notes, in the Two-Sector Model, household consumption drives firm production. If consumption stops, firms will stop production. This is tricky as people may think the flow remains unchanged."
-    },
-    {
-        "level": "Confusing/Tricky",
-        "q": "साम्यवादी अर्थव्यवस्था में यदि सरकार उत्पादन नियंत्रण छोड़ दे, तो क्या होगा?",
-        "q_en": "In a Socialist economy, if the government relinquishes production control, what will happen?",
-        "options": ["अर्थव्यवस्था पूँजीवादी हो जाएगी", "सामाजिक कल्याण बढ़ेगा", "संसाधन वितरण बंद हो जाएगा", "कर संग्रहण बढ़ेगा"],
-        "options_en": ["The Economy will Become Capitalist", "Social Welfare will Increase", "Resource Distribution will Stop", "Tax Collection will Increase"],
-        "answer": 1,
-        "explanation": "नोट्स के अनुसार, साम्यवादी अर्थव्यवस्था में सरकार उत्पादन और संसाधन वितरण को नियंत्रित करती है। यदि सरकार नियंत्रण छोड़ देती है, तो यह पूँजीवादी अर्थव्यवस्था की विशेषताओं को अपनाने लगेगी। यह भ्रामक है क्योंकि लोग सामाजिक कल्याण से जोड़ सकते हैं।",
-        "explanation_en": "According to the notes, in a Socialist economy, the government controls production and resource distribution. If the government relinquishes control, the economy will adopt Capitalist characteristics. This is tricky as people may link it to social welfare."
-    },
-    {
-        "level": "Confusing/Tricky",
-        "q": "यदि बचत को वित्तीय संस्थानों में निवेश नहीं किया जाता, तो इसे क्या माना जाता है?",
-        "q_en": "If savings are not invested in financial institutions, what are they considered?",
-        "options": ["इंजेक्शन", "रिसाव", "उपभोग", "निर्यात"],
-        "options_en": ["Injection", "Leakage", "Consumption", "Exports"],
-        "answer": 2,
-        "explanation": "नोट्स में कहा गया है कि यदि बचत को वित्तीय संस्थानों में निवेश नहीं किया जाता, तो इसे रिसाव (Leakage) माना जाता है। यह भ्रामक है क्योंकि लोग इसे निवेश से जोड़ सकते हैं।",
-        "explanation_en": "The notes state that if savings are not invested in financial institutions, they are considered a Leakage. This is tricky as people may confuse it with investment."
-    },
-
-    // Logic-based Questions (15 Questions)
-    {
-        "level": "Logic-based",
-        "q": "यदि कोई अर्थव्यवस्था केवल साम्यवादी विशेषताओं को अपनाए, तो उत्पादन के कारकों का स्वामित्व कौन संभालेगा?",
-        "q_en": "If an economy adopts only Socialist characteristics, who will control the ownership of Factors of Production?",
-        "options": ["निजी क्षेत्र", "सरकार", "उपभोक्ता", "विदेशी व्यापार"],
-        "options_en": ["Private Sector", "Government", "Consumers", "Foreign Trade"],
-        "answer": 2,
-        "explanation": "नोट्स के अनुसार, साम्यवादी अर्थव्यवस्था में प्राकृतिक, औद्योगिक और मानव संसाधनों पर सरकार का अधिकार होता है। तार्किक रूप से, यदि केवल साम्यवादी विशेषताएँ अपनाई जाती हैं, तो सरकार ही स्वामित्व संभालेगी।",
-        "explanation_en": "According to the notes, in a Socialist economy, the government controls natural, industrial, and human resources. Logically, if only Socialist characteristics are adopted, the government will control ownership."
-    },
-    {
-        "level": "Logic-based",
-        "q": "यदि घर-परिवार फर्म को उत्पादन के कारक प्रदान नहीं करते, तो दो-क्षेत्रीय मॉडल में क्या होगा?",
-        "q_en": "If Households do not provide Factors of Production to Firms, what will happen in the Two-Sector Model?",
-        "options": ["फर्म उपभोग बढ़ाएँगी", "उत्पादन बंद हो जाएगा", "मौद्रिक प्रवाह बढ़ेगा", "वास्तविक प्रवाह अपरिवर्तित रहेगा"],
-        "options_en": ["Firms will Increase Consumption", "Production will Stop", "Monetary Flow will Increase", "Real Flow will Remain Unchanged"],
-        "answer": 2,
-        "explanation": "नोट्स के अनुसार, दो-क्षेत्रीय मॉडल में घर-परिवार फर्म को उत्पादन के कारक प्रदान करते हैं। तार्किक रूप से, यदि ये कारक उपलब्ध नहीं होते, तो फर्म उत्पादन नहीं कर पाएँगी।",
-        "explanation_en": "According to the notes, in the Two-Sector Model, Households provide Firms with Factors of Production. Logically, if these factors are not provided, Firms cannot produce."
-    },
-    {
-        "level": "Logic-based",
-        "q": "यदि सरकार कर संग्रहण बंद कर दे, तो चार-क्षेत्रीय मॉडल में क्या प्रभाव पड़ेगा?",
-        "q_en": "If the Government stops tax collection, what will be the effect in the Four-Sector Model?",
-        "options": ["सब्सिडी और सेवाएँ बंद हो जाएँगी", "निर्यात बढ़ेगा", "आयात कम होगा", "निवेश बढ़ेगा"],
-        "options_en": ["Subsidies and Services will Stop", "Exports will Increase", "Imports will Decrease", "Investment will Increase"],
-        "answer": 1,
-        "explanation": "नोट्स में कहा गया है कि सरकार करों के माध्यम से राजस्व एकत्र करती है और उसका उपयोग सब्सिडी और सेवाओं के लिए करती है। तार्किक रूप से, यदि कर संग्रहण बंद हो जाता है, तो सरकार के पास सब्सिडी और सेवाएँ प्रदान करने के लिए संसाधन नहीं होंगे।",
-        "explanation_en": "The notes state that the government collects revenue through taxes to fund subsidies and services. Logically, if tax collection stops, the government will lack resources to provide subsidies and services."
-    },
-    {
-        "level": "Logic-based",
-        "q": "यदि पूँजीवादी अर्थव्यवस्था में माँग पूरी तरह से समाप्त हो जाए, तो क्या होगा?",
-        "q_en": "If demand completely disappears in a Capitalist economy, what will happen?",
-        "options": ["उत्पादन जारी रहेगा", "उत्पादन बंद हो जाएगा", "सरकारी हस्तक्षेप बढ़ेगा", "सामाजिक कल्याण बढ़ेगा"],
-        "options_en": ["Production will Continue", "Production will Stop", "Government Intervention will Increase", "Social Welfare will Increase"],
-        "answer": 2,
-        "explanation": "नोट्स के अनुसार, पूँजीवादी अर्थव्यवस्था में उत्पादन माँग और आपूर्ति पर आधारित होता है। तार्किक रूप से, यदि माँग समाप्त हो जाती है, तो उत्पादन बंद हो जाएगा।",
-        "explanation_en": "According to the notes, production in a Capitalist economy is based on demand and supply. Logically, if demand disappears, production will stop."
-    },
-    {
-        "level": "Logic-based",
-        "q": "मिश्रित अर्थव्यवस्था में यदि निजी क्षेत्र और सरकार दोनों उत्पादन करें, तो क्या होगा?",
-        "q_en": "In a Mixed Economy, if both the private sector and government undertake production, what will happen?",
-        "options": ["संसाधनों का स्वामित्व केवल सरकार के पास होगा", "संसाधनों का स्वामित्व साझा होगा", "उत्पादन बंद हो जाएगा", "कर संग्रहण बंद हो जाएगा"],
-        "options_en": ["Resource Ownership will be with Government Only", "Resource Ownership will be Shared", "Production will Stop", "Tax Collection will Stop"],
-        "answer": 2,
-        "explanation": "नोट्स के अनुसार, मिश्रित अर्थव्यवस्था में संसाधनों का स्वामित्व आंशिक रूप से सरकार और आंशिक रूप से निजी क्षेत्र के पास होता है। तार्किक रूप से, दोनों के उत्पादन करने पर स्वामित्व साझा रहेगा।",
-        "explanation_en": "According to the notes, in a Mixed Economy, resources are owned partially by the government and partially by the private sector. Logically, if both produce, ownership will remain shared."
-    },
-    {
-        "level": "Logic-based",
-        "q": "यदि कोई देश निर्यात और आयात दोनों बंद कर दे, तो चार-क्षेत्रीय मॉडल में कुल आय पर क्या प्रभाव पड़ेगा?",
-        "q_en": "If a country stops both exports and imports, what will be the effect on Total Income in the Four-Sector Model?",
-        "options": ["कुल आय बढ़ेगी", "कुल आय कम होगी", "कुल आय अपरिवर्तित रहेगी", "कुल आय शून्य हो जाएगी"],
-        "options_en": ["Total Income will Increase", "Total Income will Decrease", "Total Income will Remain Unchanged", "Total Income will Become Zero"],
-        "answer": 3,
-        "explanation": "नोट्स में कुल आय का सूत्र Y = C + I + G + (X – M) है। यदि X और M दोनों शून्य हैं, तो कुल आय Y = C + I + G होगी। तार्किक रूप से, यह अन्य कारकों पर निर्भर करेगा, लेकिन विदेशी व्यापार के अभाव में कुल आय पर कोई अतिरिक्त प्रभाव नहीं पड़ेगा।",
-        "explanation_en": "The notes provide the formula for Total Income as Y = C + I + G + (X – M). If both X and M are zero, Total Income becomes Y = C + I + G. Logically, it depends on other factors, but the absence of foreign trade has no additional effect."
-    },
-    {
-        "level": "Logic-based",
-        "q": "यदि घर-परिवार सभी आय को उपभोग में खर्च कर दें, तो आर्थिक प्रवाह में क्या होगा?",
-        "q_en": "If Households spend all their income on consumption, what will happen in the economic flow?",
-        "options": ["रिसाव बढ़ेगा", "रिसाव शून्य होगा", "इंजेक्शन कम होगा", "निर्यात बढ़ेगा"],
-        "options_en": ["Leakage will Increase", "Leakage will be Zero", "Injection will Decrease", "Exports will Increase"],
-        "answer": 2,
-        "explanation": "नोट्स के अनुसार, बचत को रिसाव माना जाता है। तार्किक रूप से, यदि सारी आय उपभोग में खर्च हो जाती है, तो बचत (रिसाव) शून्य होगी।",
-        "explanation_en": "According to the notes, savings are considered a Leakage. Logically, if all income is spent on consumption, savings (Leakage) will be zero."
-    },
-    {
-        "level": "Logic-based",
-        "q": "यदि फर्म उत्पादन के कारकों का भुगतान नहीं करती, तो दो-क्षेत्रीय मॉडल में क्या होगा?",
-        "q_en": "If Firms do not pay for Factors of Production, what will happen in the Two-Sector Model?",
-        "options": ["घर-परिवार उपभोग बढ़ाएँगे", "घर-परिवार उत्पादन के कारक प्रदान करना बंद कर देंगे", "मौद्रिक प्रवाह बढ़ेगा", "वास्तविक प्रवाह अपरिवर्तित रहेगा"],
-        "options_en": ["Households will Increase Consumption", "Households will Stop Providing Factors of Production", "Monetary Flow will Increase", "Real Flow will Remain Unchanged"],
-        "answer": 2,
-        "explanation": "नोट्स के अनुसार, दो-क्षेत्रीय मॉडल में फर्म घर-परिवार को उत्पादन के कारकों के बदले भुगतान करती हैं। तार्किक रूप से, यदि भुगतान बंद हो जाता है, तो घर-परिवार कारक प्रदान करना बंद कर देंगे।",
-        "explanation_en": "According to the notes, in the Two-Sector Model, Firms pay Households for Factors of Production. Logically, if payments stop, Households will stop providing factors."
-    },
-    {
-        "level": "Logic-based",
-        "q": "यदि सरकार सार्वजनिक सेवाएँ प्रदान करना बंद कर दे, तो चार-क्षेत्रीय मॉडल में क्या होगा?",
-        "q_en": "If the Government stops providing public services, what will happen in the Four-Sector Model?",
-        "options": ["कर संग्रहण बढ़ेगा", "घर-परिवार की आय बढ़ेगी", "सामाजिक कल्याण कम होगा", "निर्यात बढ़ेगा"],
-        "options_en": ["Tax Collection will Increase", "Household Income will Increase", "Social Welfare will Decrease", "Exports will Increase"],
-        "answer": 3,
-        "explanation": "नोट्स में कहा गया है कि सरकार सार्वजनिक सेवाएँ (जैसे शिक्षा, स्वास्थ्य, सुरक्षा) प्रदान करती है। तार्किक रूप से, यदि ये सेवाएँ बंद हो जाती हैं, तो सामाजिक कल्याण कम होगा।",
-        "explanation_en": "The notes state that the government provides public services (e.g., education, health, security). Logically, if these services stop, social welfare will decrease."
-    },
-    {
-        "level": "Logic-based",
-        "q": "यदि पूँजीवादी अर्थव्यवस्था में सरकार हस्तक्षेप शुरू कर दे, तो यह किस प्रकार की अर्थव्यवस्था बन जाएगी?",
-        "q_en": "If the government starts intervening in a Capitalist economy, what type of economy will it become?",
-        "options": ["साम्यवादी", "मिश्रित", "पूँजीवादी", "सामंतवादी"],
-        "options_en": ["Socialist", "Mixed", "Capitalist", "Feudal"],
-        "answer": 2,
-        "explanation": "नोट्स के अनुसार, मिश्रित अर्थव्यवस्था में पूँजीवादी और साम्यवादी विशेषताएँ होती हैं। तार्किक रूप से, यदि पूँजीवादी अर्थव्यवस्था में सरकार हस्तक्षेप करती है, तो यह मिश्रित अर्थव्यवस्था बन जाएगी।",
-        "explanation_en": "According to the notes, a Mixed Economy has both Capitalist and Socialist characteristics. Logically, if the government intervenes in a Capitalist economy, it becomes a Mixed Economy."
-    },
-    {
-        "level": "Logic-based",
-        "q": "यदि कोई देश केवल निर्यात करता है और आयात नहीं करता, तो राष्ट्रीय आय पर क्या प्रभाव पड़ेगा?",
-        "q_en": "If a country only exports and does not import, what will be the effect on National Income?",
-        "options": ["राष्ट्रीय आय कम होगी", "राष्ट्रीय आय बढ़ेगी", "राष्ट्रीय आय अपरिवर्तित रहेगी", "राष्ट्रीय आय शून्य हो जाएगी"],
-        "options_en": ["National Income will Decrease", "National Income will Increase", "National Income will Remain Unchanged", "National Income will Become Zero"],
-        "answer": 2,
-        "explanation": "नोट्स के अनुसार, निर्यात से विदेशी मुद्रा अर्जित होती है, जो राष्ट्रीय आय को बढ़ाती है। तार्किक रूप से, यदि आयात शून्य है, तो शुद्ध निर्यात (X – M) सकारात्मक होगा, जिससे राष्ट्रीय आय बढ़ेगी।",
-        "explanation_en": "According to the notes, exports earn foreign currency, increasing National Income. Logically, if imports are zero, net exports (X – M) will be positive, increasing National Income."
-    },
-    {
-        "level": "Logic-based",
-        "q": "मिश्रित अर्थव्यवस्था में यदि सरकार और निजी क्षेत्र सह-अस्तित्व में न रहें, तो क्या होगा?",
-        "q_en": "In a Mixed Economy, if the government and private sector do not coexist, what will happen?",
-        "options": ["अर्थव्यवस्था साम्यवादी हो जाएगी", "अर्थव्यवस्था पूँजीवादी हो जाएगी", "अर्थव्यवस्था मिश्रित नहीं रहेगी", "राष्ट्रीय आय शून्य हो जाएगी"],
-        "options_en": ["The Economy will Become Socialist", "The Economy will Become Capitalist", "The Economy will Not Remain Mixed", "National Income will Become Zero"],
-        "answer": 3,
-        "explanation": "नोट्स के अनुसार, मिश्रित अर्थव्यवस्था में सार्वजनिक और निजी क्षेत्र का सह-अस्तित्व होता है। तार्किक रूप से, यदि यह सह-अस्तित्व नहीं रहता, तो अर्थव्यवस्था या तो साम्यवादी या पूँजीवादी बन जाएगी।",
-        "explanation_en": "According to the notes, a Mixed Economy involves the coexistence of public and private sectors. Logically, if this coexistence ceases, the economy will either become Socialist or Capitalist."
-    },
-    {
-        "level": "Logic-based",
-        "q": "यदि फर्म घर-परिवार से उत्पादन के कारक प्राप्त नहीं करती, तो वास्तविक प्रवाह पर क्या प्रभाव पड़ेगा?",
-        "q_en": "If Firms do not receive Factors of Production from Households, what will be the effect on Real Flow?",
-        "options": ["वास्तविक प्रवाह बढ़ेगा", "वास्तविक प्रवाह बंद हो जाएगा", "वास्तविक प्रवाह अपरिवर्तित रहेगा", "मौद्रिक प्रवाह बढ़ेगा"],
-        "options_en": ["Real Flow will Increase", "Real Flow will Stop", "Real Flow will Remain Unchanged", "Monetary Flow will Increase"],
-        "answer": 2,
-        "explanation": "नोट्स के अनुसार, वास्तविक प्रवाह में घर-परिवार से फर्म को उत्पादन के कारक और फर्म से घर-परिवार को वस्तुएँ और सेवाएँ शामिल हैं। तार्किक रूप से, यदि कारक उपलब्ध नहीं होंगे, तो वास्तविक प्रवाह बंद हो जाएगा।",
-        "explanation_en": "According to the notes, Real Flow includes Factors of Production from Households to Firms and goods and services from Firms to Households. Logically, if factors are not available, Real Flow will stop."
-    },
-    {
-        "level": "Logic-based",
-        "q": "यदि सरकार निवेश को प्रोत्साहन देती है, तो आर्थिक प्रवाह में क्या होगा?",
-        "q_en": "If the Government encourages investment, what will happen in the economic flow?",
-        "options": ["रिसाव बढ़ेगा", "इंजेक्शन बढ़ेगा", "उपभोग कम होगा", "निर्यात कम होगा"],
-        "options_en": ["Leakage will Increase", "Injection will Increase", "Consumption will Decrease", "Exports will Decrease"],
-        "answer": 2,
-        "explanation": "नोट्स में कहा गया है कि निवेश को आर्थिक प्रवाह में इंजेक्शन माना जाता है। तार्किक रूप से, यदि सरकार निवेश को प्रोत्साहन देती है, तो इंजेक्शन बढ़ेगा।",
-        "explanation_en": "The notes state that investment is considered an Injection in economic flow. Logically, if the government encourages investment, Injections will increase."
-    },
-    {
-        "level": "Logic-based",
-        "q": "यदि घर-परिवार कर देना बंद कर दें, तो चार-क्षेत्रीय मॉडल में सरकार की भूमिका पर क्या प्रभाव पड़ेगा?",
-        "q_en": "If Households stop paying taxes, what will be the effect on the Government’s role in the Four-Sector Model?",
-        "options": ["सरकार की भूमिका बढ़ेगी", "सरकार की भूमिका कम होगी", "सरकार की भूमिका अपरिवर्तित रहेगी", "सरकार उत्पादन बंद कर देगी"],
-        "options_en": ["Government’s Role will Increase", "Government’s Role will Decrease", "Government’s Role will Remain Unchanged", "Government will Stop Production"],
-        "answer": 2,
-        "explanation": "नोट्स के अनुसार, सरकार करों के माध्यम से राजस्व एकत्र करती है, जिसका उपयोग सार्वजनिक सेवाओं और सब्सिडी के लिए होता है। तार्किक रूप से, यदि कर बंद हो जाते हैं, तो सरकार की भूमिका कम हो जाएगी।",
-        "explanation_en": "According to the notes, the government collects revenue through taxes for public services and subsidies. Logically, if taxes stop, the government’s role will decrease."
-    },
-
-    // Hard Questions (10 Questions)
-    {
-        "level": "Hard",
-        "q": "मिश्रित अर्थव्यवस्था में यदि सरकार और निजी क्षेत्र दोनों उत्पादन बढ़ाते हैं, तो राष्ट्रीय आय पर क्या प्रभाव पड़ेगा?",
-        "q_en": "In a Mixed Economy, if both the government and private sector increase production, what will be the effect on National Income?",
-        "options": ["राष्ट्रीय आय कम होगी", "राष्ट्रीय आय बढ़ेगी", "राष्ट्रीय आय अपरिवर्तित रहेगी", "राष्ट्रीय आय शून्य हो जाएगी"],
-        "options_en": ["National Income will Decrease", "National Income will Increase", "National Income will Remain Unchanged", "National Income will Become Zero"],
-        "answer": 2,
-        "explanation": "नोट्स के अनुसार, मिश्रित अर्थव्यवस्था में सरकार और निजी क्षेत्र दोनों उत्पादन करते हैं। यदि दोनों उत्पादन बढ़ाते हैं, तो कुल उत्पादन (और इस प्रकार राष्ट्रीय आय) बढ़ेगी, क्योंकि उत्पादन राष्ट्रीय आय का हिस्सा है।",
-        "explanation_en": "According to the notes, in a Mixed Economy, both the government and private sector undertake production. If both increase production, total production (and thus National Income) will increase, as production is a component of National Income."
-    },
-    {
-        "level": "Hard",
-        "q": "दो-क्षेत्रीय मॉडल में यदि घर-परिवार की आय बढ़ती है, लेकिन उपभोग नहीं बढ़ता, तो क्या होगा?",
-        "q_en": "In the Two-Sector Model, if Households’ income increases but consumption does not, what will happen?",
-        "options": ["निवेश बढ़ेगा", "बचत बढ़ेगी", "उत्पादन बढ़ेगा", "मौद्रिक प्रवाह कम होगा"],
-        "options_en": ["Investment will Increase", "Savings will Increase", "Production will Increase", "Monetary Flow will Decrease"],
-        "answer": 2,
-        "explanation": "नोट्स के अनुसार, आय = व्यय + बचत। यदि आय बढ़ती है, लेकिन उपभोग (व्यय) नहीं बढ़ता, तो शेष आय बचत के रूप में बढ़ेगी। यह कठिन है क्योंकि लोग इसे उत्पादन या निवेश से जोड़ सकते हैं।",
-        "explanation_en": "According to the notes, Income = Expenditure + Savings. If income increases but consumption (expenditure) does not, the remaining income will increase savings. This is hard as people may link it to production or investment."
-    },
-    {
-        "level": "Hard",
-        "q": "चार-क्षेत्रीय मॉडल में यदि सरकार का व्यय बढ़ता है, तो कुल आय पर क्या प्रभाव पड़ेगा?",
-        "q_en": "In the Four-Sector Model, if Government expenditure increases, what will be the effect on Total Income?",
-        "options": ["कुल आय कम होगी", "कुल आय बढ़ेगी", "कुल आय अपरिवर्तित रहेगी", "कुल आय शून्य हो जाएगी"],
-        "options_en": ["Total Income will Decrease", "Total Income will Increase", "Total Income will Remain Unchanged", "Total Income will Become Zero"],
-        "answer": 2,
-        "explanation": "नोट्स में कुल आय का सूत्र Y = C + I + G + (X – M) है। यदि सरकारी व्यय (G) बढ़ता है, तो कुल आय बढ़ेगी। यह कठिन है क्योंकि लोग इसे करों या रिसाव से जोड़ सकते हैं।",
-        "explanation_en": "The notes provide the formula for Total Income as Y = C + I + G + (X – M). If government expenditure (G) increases, Total Income will increase. This is hard as people may link it to taxes or leakages."
-    },
-    {
-        "level": "Hard",
-        "q": "यदि पूँजीवादी अर्थव्यवस्था में माँग और आपूर्ति संतुलन में नहीं हैं, तो क्या होगा?",
-        "q_en": "If demand and supply are not in balance in a Capitalist economy, what will happen?",
-        "options": ["मूल्य स्थिर रहेंगे", "मूल्य में उतार-चढ़ाव होगा", "सरकारी हस्तक्षेप बढ़ेगा", "सामाजिक कल्याण बढ़ेगा"],
-        "options_en": ["Prices will Remain Stable", "Prices will Fluctuate", "Government Intervention will Increase", "Social Welfare will Increase"],
-        "answer": 2,
-        "explanation": "नोट्स के अनुसार, पूँजीवादी अर्थव्यवस्था में माँग और आपूर्ति की शक्तियाँ मूल्य निर्धारण को नियंत्रित करती हैं। यदि संतुलन नहीं है, तो मूल्य में उतार-चढ़ाव होगा। यह कठिन है क्योंकि लोग सरकारी हस्तक्षेप की उम्मीद कर सकते हैं।",
-        "explanation_en": "According to the notes, in a Capitalist economy, demand and supply forces control pricing. If they are not balanced, prices will fluctuate. This is hard as people may expect government intervention."
-    },
     
-    
+   
+    {
+        "q": "Economics शब्द की उत्पत्ति किस भाषा से हुई है?",
+        "q_en": "From which language does the word 'Economics' originate?",
+        "options": ["लैटिन", "ग्रीक", "संस्कृत", "अंग्रेज़ी"],
+        "options_en": ["Latin", "Greek", "Sanskrit", "English"],
+        "answer": 1,
+        "explanation": "Economics शब्द ग्रीक भाषा से आया है। इसका मतलब household management था। Trick: Eco = घर (Greek oikos), Nomics = नियम → घर चलाने के नियम = Economics.",
+        "explanation_en": "The word 'Economics' originates from Greek, meaning household management. Trick: Eco = home (Greek oikos), Nomics = rules → rules for managing a home = Economics."
+    },
+    {
+        "q": "हिंदी में अर्थशास्त्र को किससे जोड़ा गया है?",
+        "q_en": "In Hindi, what is economics associated with?",
+        "options": ["समाजशास्त्र", "भौतिकी", "चाणक्य नीति", "भूगोल"],
+        "options_en": ["Sociology", "Physics", "Chanakya Niti", "Geography"],
+        "answer": 2,
+        "explanation": "हिंदी में अर्थशास्त्र को चाणक्य नीति का ज्ञान माना गया। Trick: Chanakya = अर्थशास्त्र → राजकीय नीति.",
+        "explanation_en": "In Hindi, economics is considered the knowledge of Chanakya Niti. Trick: Chanakya = economics → state policy."
+    },
+    {
+        "q": "'Wealth of Nations' पुस्तक के लेखक कौन हैं?",
+        "q_en": "Who is the author of the book 'Wealth of Nations'?",
+        "options": ["कार्ल मार्क्स", "एडम स्मिथ", "जे.बी. से", "केन्स"],
+        "options_en": ["Karl Marx", "Adam Smith", "J.B. Say", "Keynes"],
+        "answer": 1,
+        "explanation": "1776 में एडम स्मिथ ने यह पुस्तक लिखी, इन्हें Father of Economics कहा जाता है। Trick: Wealth = पैसा → Smith → Father of Economics.",
+        "explanation_en": "Adam Smith wrote this book in 1776 and is called the Father of Economics. Trick: Wealth = money → Smith → Father of Economics."
+    },
+    {
+        "q": "एडम स्मिथ को किस नाम से जाना जाता है?",
+        "q_en": "By what name is Adam Smith known?",
+        "options": ["Father of Politics", "Father of Economics", "Father of Banking", "Father of Finance"],
+        "options_en": ["Father of Politics", "Father of Economics", "Father of Banking", "Father of Finance"],
+        "answer": 1,
+        "explanation": "क्योंकि उन्होंने अर्थशास्त्र को व्यवस्थित रूप दिया।",
+        "explanation_en": "Because he systematized economics."
+    },
+    {
+        "q": "1969 में अर्थशास्त्र को विज्ञान की शाखा किसने माना?",
+        "q_en": "Who recognized economics as a branch of science in 1969?",
+        "options": ["नोबेल फाउंडेशन", "नोल्स ब्रदर्स", "IMF", "RBI"],
+        "options_en": ["Nobel Foundation", "Nolls Brothers", "IMF", "RBI"],
+        "answer": 1,
+        "explanation": "1969 में नोल्स ब्रदर्स ने अर्थशास्त्र को विज्ञान की एक शाखा के रूप में स्वीकारा।",
+        "explanation_en": "In 1969, the Nolls Brothers recognized economics as a branch of science."
+    },
+    {
+        "q": "अर्थशास्त्र की दो प्रमुख शाखाएँ कौन सी हैं?",
+        "q_en": "What are the two major branches of economics?",
+        "options": ["Macro और Micro", "Banking और Finance", "Trade और Commerce", "Public और Private"],
+        "options_en": ["Macro and Micro", "Banking and Finance", "Trade and Commerce", "Public and Private"],
+        "answer": 0,
+        "explanation": "Micro → छोटी इकाइयाँ (individual, firm), Macro → पूरी अर्थव्यवस्था। Trick: Micro = छोटा, Macro = बड़ा.",
+        "explanation_en": "Micro → small units (individual, firm), Macro → entire economy. Trick: Micro = small, Macro = large."
+    },
+    {
+        "q": "Microeconomics किसका अध्ययन करता है?",
+        "q_en": "What does microeconomics study?",
+        "options": ["राष्ट्रीय आय", "उत्पादन की इकाइयाँ", "विदेशी व्यापार", "योजना"],
+        "options_en": ["National income", "Units of production", "Foreign trade", "Planning"],
+        "answer": 1,
+        "explanation": "Microeconomics व्यक्तिगत उपभोक्ता, उत्पादक, फर्म, उद्योग की study करता है। Trick: Micro = छोटा level.",
+        "explanation_en": "Microeconomics studies individual consumers, producers, firms, and industries. Trick: Micro = small level."
+    },
+    {
+        "q": "Macroeconomics किसका अध्ययन करता है?",
+        "q_en": "What does macroeconomics study?",
+        "options": ["व्यक्ति का व्यवहार", "फर्म का उत्पादन", "राष्ट्रीय आय, बेरोजगारी, महँगाई", "लागत और लाभ"],
+        "options_en": ["Individual behavior", "Firm production", "National income, unemployment, inflation", "Cost and profit"],
+        "answer": 2,
+        "explanation": "Macro level पर पूरी अर्थव्यवस्था के मुद्दे आते हैं।",
+        "explanation_en": "Macroeconomics deals with issues of the entire economy."
+    },
+    {
+        "q": "Normative Economics किससे संबंधित है?",
+        "q_en": "What is normative economics related to?",
+        "options": ["क्या होना चाहिए", "क्या है", "कर व्यवस्था", "योजना"],
+        "options_en": ["What should be", "What is", "Tax system", "Planning"],
+        "answer": 0,
+        "explanation": "Normative Economics मूल्यांकन करती है और सुझाव देती है। Trick: Norm = होना चाहिए.",
+        "explanation_en": "Normative economics evaluates and provides suggestions. Trick: Norm = should be."
+    },
+    {
+        "q": "Positive Economics किससे संबंधित है?",
+        "q_en": "What is positive economics related to?",
+        "options": ["क्या होना चाहिए", "क्या है", "आदर्श नीति", "योजना"],
+        "options_en": ["What should be", "What is", "Ideal policy", "Planning"],
+        "answer": 1,
+        "explanation": "Positive Economics तथ्य आधारित होती है, जैसे 'भारत की GDP 7% है'। Trick: Positive = तथ्य, reality.",
+        "explanation_en": "Positive economics is fact-based, e.g., 'India's GDP is 7%'. Trick: Positive = facts, reality."
+    },
+    {
+        "q": "भारत की अर्थव्यवस्था का स्वरूप क्या है?",
+        "q_en": "What is the nature of India's economy?",
+        "options": ["समाजवादी", "पूंजीवादी", "मिश्रित", "केवल कृषि आधारित"],
+        "options_en": ["Socialist", "Capitalist", "Mixed", "Only agriculture-based"],
+        "answer": 2,
+        "explanation": "भारत में Public + Private दोनों sectors काम करते हैं। Trick: Mix = Sarkar + Private.",
+        "explanation_en": "In India, both public and private sectors operate. Trick: Mix = Government + Private."
+    },
+    {
+        "q": "Developing Economy का मतलब?",
+        "q_en": "What does a developing economy mean?",
+        "options": ["विकसित", "विकासशील", "अविकसित", "स्थिर"],
+        "options_en": ["Developed", "Developing", "Underdeveloped", "Stable"],
+        "answer": 1,
+        "explanation": "भारत एक विकासशील देश है क्योंकि per capita income कम है, गरीबी और बेरोजगारी अधिक है।",
+        "explanation_en": "India is a developing country because per capita income is low, and poverty and unemployment are high."
+    },
+    {
+        "q": "Primary Sector का योगदान 2024–25 में GDP में कितना है?",
+        "q_en": "What is the contribution of the primary sector to GDP in 2024–25?",
+        "options": ["25%", "42%", "16%", "50%"],
+        "options_en": ["25%", "42%", "16%", "50%"],
+        "answer": 2,
+        "explanation": "Notes के अनुसार Primary sector का GDP में योगदान लगभग 16% है।",
+        "explanation_en": "According to notes, the primary sector's contribution to GDP is approximately 16%."
+    },
+    {
+        "q": "Primary Sector में कार्य क्या-क्या आते हैं?",
+        "q_en": "What activities are included in the primary sector?",
+        "options": ["उद्योग", "सेवाएँ", "कृषि, पशुपालन, मत्स्यपालन, खनन", "IT services"],
+        "options_en": ["Industry", "Services", "Agriculture, animal husbandry, fisheries, mining", "IT services"],
+        "answer": 2,
+        "explanation": "ये प्राकृतिक संसाधनों पर आधारित गतिविधियाँ हैं।",
+        "explanation_en": "These are activities based on natural resources."
+    },
+    {
+        "q": "Secondary Sector का मुख्य कार्य क्या है?",
+        "q_en": "What is the main function of the secondary sector?",
+        "options": ["उत्पादन + निर्माण", "शिक्षा", "बैंकिंग", "पॉलिसी बनाना"],
+        "options_en": ["Production + manufacturing", "Education", "Banking", "Policy making"],
+        "answer": 0,
+        "explanation": "Secondary sector में raw material से finished goods बनाए जाते हैं। Trick: Secondary = factory.",
+        "explanation_en": "The secondary sector converts raw materials into finished goods. Trick: Secondary = factory."
+    },
+    {
+        "q": "Secondary Sector का GVA में योगदान (2023–24) कितना है?",
+        "q_en": "What is the contribution of the secondary sector to GVA in 2023–24?",
+        "options": ["17.7%", "27.6%", "57%", "42%"],
+        "options_en": ["17.7%", "27.6%", "57%", "42%"],
+        "answer": 1,
+        "explanation": "Notes के अनुसार Secondary sector का योगदान 27.6% है।",
+        "explanation_en": "According to notes, the secondary sector's contribution to GVA is 27.6%."
+    },
+    {
+        "q": "Tertiary Sector को और किस नाम से जाना जाता है?",
+        "q_en": "By what other name is the tertiary sector known?",
+        "options": ["Production Sector", "Manufacturing Sector", "Service Sector", "Agriculture"],
+        "options_en": ["Production Sector", "Manufacturing Sector", "Service Sector", "Agriculture"],
+        "answer": 2,
+        "explanation": "इसमें banking, IT, health, transport आदि आते हैं।",
+        "explanation_en": "It includes banking, IT, health, transport, etc."
+    },
+    {
+        "q": "Service Sector का GVA में योगदान (2024–25 अनुमान)?",
+        "q_en": "What is the estimated contribution of the service sector to GVA in 2024–25?",
+        "options": ["16%", "27%", "42%", "60%"],
+        "options_en": ["16%", "27%", "42%", "60%"],
+        "answer": 3,
+        "explanation": "अनुमानित योगदान लगभग 60% है।",
+        "explanation_en": "The estimated contribution is approximately 60%."
+    },
+    {
+        "q": "भारत की लगभग कितनी जनसंख्या कृषि पर निर्भर है (2024–25)?",
+        "q_en": "What percentage of India's population depends on agriculture in 2024–25?",
+        "options": ["30%", "42.1%", "57%", "60%"],
+        "options_en": ["30%", "42.1%", "57%", "60%"],
+        "answer": 1,
+        "explanation": "Notes के अनुसार 42.1% लोग कृषि और allied activities पर निर्भर हैं।",
+        "explanation_en": "According to notes, 42.1% of people depend on agriculture and allied activities."
+    },
+    {
+        "q": "भारत की अर्थव्यवस्था का सबसे बड़ा सेक्टर (GDP योगदान) कौन सा है?",
+        "q_en": "Which is the largest sector of India's economy by GDP contribution?",
+        "options": ["Primary", "Secondary", "Tertiary", "Agriculture"],
+        "options_en": ["Primary", "Secondary", "Tertiary", "Agriculture"],
+        "answer": 2,
+        "explanation": "लगभग 60% GDP का योगदान Service sector से आता है।",
+        "explanation_en": "Approximately 60% of GDP comes from the service sector."
+    },
+    {
+        "q": "मुद्रास्फीति को नियंत्रित करने के लिए RBI क्या करती है?",
+        "q_en": "What does the RBI do to control inflation?",
+        "options": ["Repo Rate घटाती है", "Repo Rate बढ़ाती है", "Cash Reserve Ratio घटाती है", "SLR घटाती है"],
+        "options_en": ["Decreases Repo Rate", "Increases Repo Rate", "Decreases Cash Reserve Ratio", "Decreases SLR"],
+        "answer": 1,
+        "explanation": "महँगाई रोकने के लिए RBI Hard Monetary Policy अपनाती है। Trick: महँगाई ↑ → Interest ↑ → Loan महँगा → Demand ↓.",
+        "explanation_en": "To control inflation, RBI adopts a hard monetary policy. Trick: Inflation ↑ → Interest ↑ → Loans expensive → Demand ↓."
+    },
+    {
+        "q": "CRR बढ़ाने का प्रभाव क्या होता है?",
+        "q_en": "What is the effect of increasing CRR?",
+        "options": ["बैंक अधिक लोन देंगे", "बैंक के पास कम पैसा होगा", "मुद्रा आपूर्ति बढ़ेगी", "बेरोजगारी घटेगी"],
+        "options_en": ["Banks will give more loans", "Banks will have less money", "Money supply will increase", "Unemployment will decrease"],
+        "answer": 1,
+        "explanation": "CRR = बैंक को अधिक reserve रखना होगा → Loan देने के लिए कम पैसा।",
+        "explanation_en": "CRR = Banks must keep more reserves → Less money for loans."
+    },
+    {
+        "q": "राजकोषीय नीति में सरकार महँगाई रोकने के लिए क्या करती है?",
+        "q_en": "What does the government do in fiscal policy to control inflation?",
+        "options": ["खर्च बढ़ाती है", "कर घटाती है", "कर बढ़ाती है + खर्च घटाती है", "नोट छापती है"],
+        "options_en": ["Increases expenditure", "Reduces taxes", "Increases taxes + reduces expenditure", "Prints money"],
+        "answer": 2,
+        "explanation": "Fiscal Policy → Surplus Budget अपनाकर demand घटाई जाती है।",
+        "explanation_en": "Fiscal Policy → Adopts surplus budget to reduce demand."
+    },
+    {
+        "q": "Surplus Budget का मुख्य उद्देश्य?",
+        "q_en": "What is the main objective of a surplus budget?",
+        "options": ["Demand बढ़ाना", "Demand घटाना", "रोजगार बढ़ाना", "Import बढ़ाना"],
+        "options_en": ["Increase demand", "Decrease demand", "Increase employment", "Increase imports"],
+        "answer": 1,
+        "explanation": "Surplus budget = Tax ज्यादा, खर्च कम → Demand घटती है → Inflation नियंत्रित।",
+        "explanation_en": "Surplus budget = Higher taxes, lower expenditure → Demand decreases → Inflation controlled."
+    },
+    {
+        "q": "मूल्य नीति (Price Policy) का उद्देश्य?",
+        "q_en": "What is the objective of price policy?",
+        "options": ["महँगाई बढ़ाना", "मूल्य नियंत्रण", "कर संग्रह", "उत्पादन बढ़ाना"],
+        "options_en": ["Increase inflation", "Price control", "Tax collection", "Increase production"],
+        "answer": 1,
+        "explanation": "इसमें आवश्यक वस्तुओं पर Price Control और Hoarding रोकने की नीतियाँ शामिल हैं।",
+        "explanation_en": "It includes policies for price control of essential goods and preventing hoarding."
+    },
+
+    {
+        "q": "Inflation (मुद्रास्फीति) क्या है?",
+        "q_en": "What is inflation?",
+        "options": ["मुद्रा का मूल्य बढ़ना", "मुद्रा का मूल्य घटना और वस्तुओं के दाम बढ़ना", "उत्पादन कम होना", "रोजगार बढ़ना"],
+        "options_en": ["Increase in the value of money", "Decrease in the value of money and increase in prices of goods", "Decrease in production", "Increase in employment"],
+        "answer": 1,
+        "explanation": "Inflation = जब demand ज्यादा और supply कम हो जाती है तो कीमतें बढ़ती हैं। इसका मतलब पैसों की purchasing power घट जाती है। Trick: Inflation = Price ↑ Value of Money ↓.",
+        "explanation_en": "Inflation occurs when demand exceeds supply, causing prices to rise, which means the purchasing power of money decreases. Trick: Inflation = Price ↑ Value of Money ↓."
+    },
+    {
+        "q": "Inflation को नियंत्रित करने के लिए किस प्रकार की मौद्रिक नीति अपनाई जाती है?",
+        "q_en": "What type of monetary policy is adopted to control inflation?",
+        "options": ["Soft Monetary Policy", "Hard Monetary Policy", "Neutral Policy", "कोई नहीं"],
+        "options_en": ["Soft Monetary Policy", "Hard Monetary Policy", "Neutral Policy", "None"],
+        "answer": 1,
+        "explanation": "Hard Monetary Policy = ब्याज दरें (Repo, CRR, SLR) बढ़ाना → loan महँगा → demand घटे → inflation कम।",
+        "explanation_en": "Hard Monetary Policy = Increasing interest rates (Repo, CRR, SLR) → loans become expensive → demand decreases → inflation reduces."
+    },
+    {
+        "q": "Repo Rate बढ़ाने का प्रभाव क्या है?",
+        "q_en": "What is the effect of increasing the Repo Rate?",
+        "options": ["Loan सस्ता होता है", "Loan महँगा होता है", "बैंकिंग liquidity बढ़ती है", "कीमतें बढ़ती हैं"],
+        "options_en": ["Loans become cheaper", "Loans become expensive", "Banking liquidity increases", "Prices increase"],
+        "answer": 1,
+        "explanation": "Repo Rate ↑ → बैंक को RBI से loan महँगा मिलेगा → जनता को भी loan महँगा मिलेगा → demand घटेगी।",
+        "explanation_en": "Repo Rate ↑ → Banks get expensive loans from RBI → Public also gets expensive loans → demand decreases."
+    },
+    {
+        "q": "CRR (Cash Reserve Ratio) क्या है?",
+        "q_en": "What is CRR (Cash Reserve Ratio)?",
+        "options": ["बैंक का लाभ अनुपात", "बैंक द्वारा RBI में जमा रखना अनिवार्य नकद अनुपात", "बैंक द्वारा ग्राहकों को दिया जाने वाला ऋण", "मुद्रा आपूर्ति"],
+        "options_en": ["Bank's profit ratio", "Mandatory cash reserve ratio deposited by banks with RBI", "Loans given by banks to customers", "Money supply"],
+        "answer": 1,
+        "explanation": "CRR = वह प्रतिशत cash, जो commercial banks को RBI में deposit रखना जरूरी है।",
+        "explanation_en": "CRR = The percentage of cash that commercial banks must deposit with the RBI."
+    },
+    {
+        "q": "SLR (Statutory Liquidity Ratio) का अर्थ क्या है?",
+        "q_en": "What does SLR (Statutory Liquidity Ratio) mean?",
+        "options": ["नकद + सोना + सरकारी securities", "केवल नकद", "केवल सोना", "केवल विदेशी मुद्रा"],
+        "options_en": ["Cash + gold + government securities", "Only cash", "Only gold", "Only foreign currency"],
+        "answer": 0,
+        "explanation": "SLR = वह अनुपात जो banks को अपनी total NDTL (Net Demand & Time Liabilities) में रखना होता है।",
+        "explanation_en": "SLR = The ratio that banks must maintain in their total NDTL (Net Demand & Time Liabilities)."
+    },
+    {
+        "q": "Monetary Policy Committee (MPC) में कितने सदस्य होते हैं?",
+        "q_en": "How many members are in the Monetary Policy Committee (MPC)?",
+        "options": ["3", "5", "6", "7"],
+        "options_en": ["3", "5", "6", "7"],
+        "answer": 2,
+        "explanation": "MPC = 6 सदस्य → 3 RBI (Governor + 2) + 3 सरकार द्वारा नियुक्त। Trick: MPC = RBI 3 + Govt 3 = 6.",
+        "explanation_en": "MPC = 6 members → 3 from RBI (Governor + 2) + 3 appointed by the government. Trick: MPC = RBI 3 + Govt 3 = 6."
+    },
+    {
+        "q": "Fiscal Policy (राजकोषीय नीति) का संचालन कौन करता है?",
+        "q_en": "Who manages Fiscal Policy?",
+        "options": ["RBI", "वित्त मंत्रालय (Finance Ministry)", "SEBI", "Planning Commission"],
+        "options_en": ["RBI", "Finance Ministry", "SEBI", "Planning Commission"],
+        "answer": 1,
+        "explanation": "Fiscal policy = Tax, खर्च, Budget → Finance Ministry के द्वारा। Monetary policy = RBI।",
+        "explanation_en": "Fiscal policy = Taxes, expenditure, Budget → Managed by the Finance Ministry. Monetary policy = RBI."
+    },
+    {
+        "q": "भारत में 'Budget' किसके द्वारा पेश किया जाता है?",
+        "q_en": "Who presents the Budget in India?",
+        "options": ["प्रधानमंत्री", "राष्ट्रपति", "वित्त मंत्री", "RBI Governor"],
+        "options_en": ["Prime Minister", "President", "Finance Minister", "RBI Governor"],
+        "answer": 2,
+        "explanation": "Budget हर साल 1 फरवरी को संसद में Finance Minister पेश करते हैं।",
+        "explanation_en": "The Budget is presented annually on February 1 in Parliament by the Finance Minister."
+    },
+    {
+        "q": "Fiscal Deficit का अर्थ क्या है?",
+        "q_en": "What does Fiscal Deficit mean?",
+        "options": ["आय > व्यय", "व्यय > आय", "दोनों बराबर", "None"],
+        "options_en": ["Revenue > Expenditure", "Expenditure > Revenue", "Both equal", "None"],
+        "answer": 1,
+        "explanation": "जब सरकार का कुल व्यय, कुल राजस्व से ज्यादा होता है (borrowings छोड़कर) → Fiscal Deficit।",
+        "explanation_en": "When the government's total expenditure exceeds total revenue (excluding borrowings) → Fiscal Deficit."
+    },
+    {
+        "q": "Revenue Deficit का अर्थ क्या है?",
+        "q_en": "What does Revenue Deficit mean?",
+        "options": ["Revenue Expenditure > Revenue Receipts", "Revenue Receipts > Revenue Expenditure", "दोनों बराबर", "None"],
+        "options_en": ["Revenue Expenditure > Revenue Receipts", "Revenue Receipts > Revenue Expenditure", "Both equal", "None"],
+        "answer": 0,
+        "explanation": "जब सरकार की आय से ज्यादा revenue खर्च होता है → Revenue Deficit।",
+        "explanation_en": "When the government's revenue expenditure exceeds revenue receipts → Revenue Deficit."
+    },
+    {
+        "q": "भारत का केंद्रीय बैंक कौन है?",
+        "q_en": "Which is the central bank of India?",
+        "options": ["SBI", "RBI", "ICICI", "NABARD"],
+        "options_en": ["SBI", "RBI", "ICICI", "NABARD"],
+        "answer": 1,
+        "explanation": "RBI = भारत का केंद्रीय बैंक, 1935 में स्थापित, 1949 में राष्ट्रीयकृत।",
+        "explanation_en": "RBI = India's central bank, established in 1935, nationalized in 1949."
+    },
+    {
+        "q": "भारतीय रिज़र्व बैंक की स्थापना कब हुई?",
+        "q_en": "When was the Reserve Bank of India established?",
+        "options": ["1930", "1932", "1935", "1947"],
+        "options_en": ["1930", "1932", "1935", "1947"],
+        "answer": 2,
+        "explanation": "RBI की स्थापना 1 अप्रैल 1935 को हुई।",
+        "explanation_en": "The RBI was established on April 1, 1935."
+    },
+    {
+        "q": "RBI का राष्ट्रीयकरण कब हुआ?",
+        "q_en": "When was the RBI nationalized?",
+        "options": ["1947", "1948", "1949", "1950"],
+        "options_en": ["1947", "1948", "1949", "1950"],
+        "answer": 2,
+        "explanation": "RBI को 1 जनवरी 1949 को nationalized किया गया।",
+        "explanation_en": "The RBI was nationalized on January 1, 1949."
+    },
+    {
+        "q": "RBI का मुख्य कार्य क्या है?",
+        "q_en": "What is the main function of the RBI?",
+        "options": ["Loan देना", "नोट छापना और मौद्रिक नीति बनाना", "विदेशी व्यापार करना", "कर वसूलना"],
+        "options_en": ["Giving loans", "Printing currency and making monetary policy", "Conducting foreign trade", "Collecting taxes"],
+        "answer": 1,
+        "explanation": "RBI = Currency Issue + Monetary Policy + Banking Regulation.",
+        "explanation_en": "RBI = Currency issuance + Monetary policy + Banking regulation."
+    },
+    {
+        "q": "भारत में कौन सा नोट RBI द्वारा जारी नहीं किया जाता?",
+        "q_en": "Which note is not issued by the RBI in India?",
+        "options": ["₹10", "₹20", "₹1", "₹500"],
+        "options_en": ["₹10", "₹20", "₹1", "₹500"],
+        "answer": 2,
+        "explanation": "₹1 का नोट सरकार (Finance Ministry) जारी करती है, बाक़ी RBI। Trick: 1 रुपये = सरकार का अधिकार।",
+        "explanation_en": "The ₹1 note is issued by the government (Finance Ministry), the rest by RBI. Trick: ₹1 = Government's authority."
+    },
+    {
+        "q": "मुद्रा के प्रकारों में कौन-कौन आते हैं?",
+        "q_en": "What are the types of money?",
+        "options": ["वस्तु मुद्रा (Commodity Money)", "कागज़ी मुद्रा (Paper Money)", "बैंक मुद्रा (Bank Money)", "उपरोक्त सभी"],
+        "options_en": ["Commodity Money", "Paper Money", "Bank Money", "All of the above"],
+        "answer": 3,
+        "explanation": "Money = Commodity (जैसे सोना), Paper (notes), Bank (cheques)।",
+        "explanation_en": "Money = Commodity (e.g., gold), Paper (notes), Bank (cheques)."
+    },
+    {
+        "q": "Narrow Money (M1) में क्या-क्या आता है?",
+        "q_en": "What is included in Narrow Money (M1)?",
+        "options": ["Currency + Demand Deposits + Other Deposits", "Currency + Term Deposits", "Currency + Gold", "केवल Notes"],
+        "options_en": ["Currency + Demand Deposits + Other Deposits", "Currency + Term Deposits", "Currency + Gold", "Only Notes"],
+        "answer": 0,
+        "explanation": "Narrow Money = M1 = C + DD + OD.",
+        "explanation_en": "Narrow Money = M1 = Currency + Demand Deposits + Other Deposits."
+    },
+    {
+        "q": "Broad Money (M3) क्या है?",
+        "q_en": "What is Broad Money (M3)?",
+        "options": ["M1 + Time Deposits", "Currency + Gold", "केवल Current Deposits", "केवल Notes"],
+        "options_en": ["M1 + Time Deposits", "Currency + Gold", "Only Current Deposits", "Only Notes"],
+        "answer": 0,
+        "explanation": "M3 = Broad Money = M1 + Term Deposits. Trick: M3 = M1 + Fixed Deposit.",
+        "explanation_en": "M3 = Broad Money = M1 + Term Deposits. Trick: M3 = M1 + Fixed Deposit."
+    },
+    {
+        "q": "भारत में सबसे ज्यादा प्रयोग होने वाला Monetary Aggregate कौन सा है?",
+        "q_en": "Which is the most widely used Monetary Aggregate in India?",
+        "options": ["M0", "M1", "M2", "M3"],
+        "options_en": ["M0", "M1", "M2", "M3"],
+        "answer": 3,
+        "explanation": "RBI और सरकार economic analysis में ज़्यादातर M3 का इस्तेमाल करते हैं।",
+        "explanation_en": "The RBI and government mostly use M3 for economic analysis."
+    },
+    {
+        "q": "विदेशी व्यापार (Foreign Trade) में 'BoP' का अर्थ क्या है?",
+        "q_en": "What does 'BoP' mean in foreign trade?",
+        "options": ["Balance of Payments", "Bank of People", "Business of Production", "Balance of Products"],
+        "options_en": ["Balance of Payments", "Bank of People", "Business of Production", "Balance of Products"],
+        "answer": 0,
+        "explanation": "BoP = देश का Import–Export + Foreign exchange का पूरा हिसाब।",
+        "explanation_en": "BoP = A country's complete account of imports, exports, and foreign exchange."
+    },
+    {
+        "q": "भारत की Foreign Trade Policy बनाने की जिम्मेदारी किसकी है?",
+        "q_en": "Who is responsible for making India's Foreign Trade Policy?",
+        "options": ["RBI", "वित्त मंत्रालय", "वाणिज्य एवं उद्योग मंत्रालय", "SEBI"],
+        "options_en": ["RBI", "Finance Ministry", "Ministry of Commerce and Industry", "SEBI"],
+        "answer": 2,
+        "explanation": "Commerce & Industry Ministry हर 5 साल की Foreign Trade Policy बनाती है।",
+        "explanation_en": "The Ministry of Commerce and Industry formulates the Foreign Trade Policy every 5 years."
+    },
+    {
+        "q": "FDI (Foreign Direct Investment) का उदाहरण?",
+        "q_en": "What is an example of FDI (Foreign Direct Investment)?",
+        "options": ["विदेशी कंपनी भारत में फैक्ट्री लगाना", "शेयर बाजार में विदेशी पैसा लगाना", "भारतीय कंपनी विदेश में पैसा लगाना", "भारतीय सरकार का loan लेना"],
+        "options_en": ["Foreign company setting up a factory in India", "Foreign investment in the stock market", "Indian company investing abroad", "Indian government taking a loan"],
+        "answer": 0,
+        "explanation": "FDI = long-term physical investment → जैसे foreign company का India में Plant खोलना।",
+        "explanation_en": "FDI = Long-term physical investment, e.g., a foreign company setting up a plant in India."
+    },
+    {
+        "q": "FII (Foreign Institutional Investors) का उदाहरण?",
+        "q_en": "What is an example of FII (Foreign Institutional Investors)?",
+        "options": ["Mutual Fund का पैसा भारतीय शेयर बाजार में आना", "विदेशी कंपनी का फैक्ट्री लगाना", "सरकार का loan लेना", "घरेलू बैंकिंग"],
+        "options_en": ["Mutual Fund money entering the Indian stock market", "Foreign company setting up a factory", "Government taking a loan", "Domestic banking"],
+        "answer": 0,
+        "explanation": "FII = Short-term investment → Stock Market / Bonds।",
+        "explanation_en": "FII = Short-term investment in the stock market or bonds."
+    },
+    {
+        "q": "Commercial Banks का मुख्य कार्य क्या है?",
+        "q_en": "What is the main function of Commercial Banks?",
+        "options": ["Currency छापना", "Loan देना और जमा लेना", "Budget बनाना", "Tax वसूलना"],
+        "options_en": ["Printing currency", "Giving loans and accepting deposits", "Making the budget", "Collecting taxes"],
+        "answer": 1,
+        "explanation": "Commercial Banks → Deposit लेते हैं + Loan देते हैं।",
+        "explanation_en": "Commercial Banks accept deposits and provide loans."
+    },
+    {
+        "q": "भारत में Regional Rural Banks (RRBs) कब स्थापित हुए?",
+        "q_en": "When were Regional Rural Banks (RRBs) established in India?",
+        "options": ["1969", "1975", "1980", "1991"],
+        "options_en": ["1969", "1975", "1980", "1991"],
+        "answer": 1,
+        "explanation": "RRBs = ग्रामीण क्षेत्रों को credit देने के लिए 1975 में शुरू हुए। Trick: '75 → RRB'.",
+        "explanation_en": "RRBs were started in 1975 to provide credit to rural areas. Trick: '75 → RRB'."
+    },
+
+    {
+        "q": "GDP (Gross Domestic Product) का अर्थ क्या है?",
+        "q_en": "What does GDP (Gross Domestic Product) mean?",
+        "options": ["देश की सीमाओं में उत्पादित वस्तुएँ और सेवाएँ", "विदेश में कमाई गई आय", "केवल कृषि उत्पादन", "केवल उद्योग उत्पादन"],
+        "options_en": ["Goods and services produced within the country's borders", "Income earned abroad", "Only agricultural production", "Only industrial production"],
+        "answer": 0,
+        "explanation": "GDP = देश की भौगोलिक सीमाओं के भीतर एक निश्चित अवधि में उत्पन्न सभी अंतिम वस्तुओं और सेवाओं का कुल मूल्य। Trick: G = Geographical (सीमा के अंदर)।",
+        "explanation_en": "GDP = The total value of all final goods and services produced within a country's geographical borders in a specific period. Trick: G = Geographical (within borders)."
+    },
+    {
+        "q": "GNP (Gross National Product) किसे कहते हैं?",
+        "q_en": "What is GNP (Gross National Product)?",
+        "options": ["केवल घरेलू उत्पादन", "देशवासियों द्वारा देश + विदेश में कमाई गई आय", "विदेशी नागरिकों की आय", "केवल कृषि आय"],
+        "options_en": ["Only domestic production", "Income earned by citizens domestically and abroad", "Income of foreign citizens", "Only agricultural income"],
+        "answer": 1,
+        "explanation": "GNP = GDP + विदेश से प्राप्त शुद्ध कारक आय (Net Factor Income from Abroad)। Trick: N = National (देशवासियों की कमाई)।",
+        "explanation_en": "GNP = GDP + Net Factor Income from Abroad. Trick: N = National (citizens' income)."
+    },
+    {
+        "q": "NNP (Net National Product) किससे प्राप्त होता है?",
+        "q_en": "How is NNP (Net National Product) derived?",
+        "options": ["GDP – Depreciation", "GNP – Depreciation", "GNP + Subsidy", "GDP + Import"],
+        "options_en": ["GDP – Depreciation", "GNP – Depreciation", "GNP + Subsidy", "GDP + Import"],
+        "answer": 1,
+        "explanation": "NNP = GNP – Depreciation (पूँजी ह्रास)। Trick: Net = घटा दो Depreciation।",
+        "explanation_en": "NNP = GNP – Depreciation (capital wear and tear). Trick: Net = Subtract Depreciation."
+    },
+    {
+        "q": "NDP (Net Domestic Product) क्या है?",
+        "q_en": "What is NDP (Net Domestic Product)?",
+        "options": ["GDP – Depreciation", "GNP – Depreciation", "NNP – Import", "GDP + Export"],
+        "options_en": ["GDP – Depreciation", "GNP – Depreciation", "NNP – Import", "GDP + Export"],
+        "answer": 0,
+        "explanation": "NDP = Domestic (देश की सीमा के भीतर) उत्पादन का शुद्ध मूल्य, यानी Depreciation घटाकर।",
+        "explanation_en": "NDP = Net value of domestic production (within the country's borders), i.e., GDP minus Depreciation."
+    },
+    {
+        "q": "Real National Income क्या दर्शाता है?",
+        "q_en": "What does Real National Income indicate?",
+        "options": ["वर्तमान कीमतों पर आय", "स्थिर कीमतों पर आय", "केवल कृषि आय", "केवल उद्योग आय"],
+        "options_en": ["Income at current prices", "Income at constant prices", "Only agricultural income", "Only industrial income"],
+        "answer": 1,
+        "explanation": "Real Income = Price effect निकालकर स्थिर कीमतों पर गिनी गई आय। Trick: Real = Inflation को हटाओ।",
+        "explanation_en": "Real Income = Income calculated at constant prices, removing the price effect. Trick: Real = Remove Inflation."
+    },
+    {
+        "q": "Nominal National Income क्या होती है?",
+        "q_en": "What is Nominal National Income?",
+        "options": ["स्थिर कीमतों पर", "वर्तमान कीमतों पर", "केवल Foreign Exchange से", "केवल Tax से"],
+        "options_en": ["At constant prices", "At current prices", "Only from foreign exchange", "Only from taxes"],
+        "answer": 1,
+        "explanation": "Nominal Income = Current Price पर गिनी हुई आय (इसमें महँगाई का प्रभाव शामिल होता है)।",
+        "explanation_en": "Nominal Income = Income calculated at current prices (includes the effect of inflation)."
+    },
+    {
+        "q": "भारत में National Income की गणना कौन करता है?",
+        "q_en": "Who calculates National Income in India?",
+        "options": ["RBI", "CSO (Central Statistical Organisation)", "SEBI", "NITI Aayog"],
+        "options_en": ["RBI", "CSO (Central Statistical Organisation)", "SEBI", "NITI Aayog"],
+        "answer": 1,
+        "explanation": "भारत में राष्ट्रीय आय का अनुमान पहले CSO करती थी, अब NSO (National Statistical Office)।",
+        "explanation_en": "In India, National Income was earlier estimated by CSO, now by NSO (National Statistical Office)."
+    },
+    {
+        "q": "Income Method से National Income की गणना में क्या शामिल होता है?",
+        "q_en": "What is included in the calculation of National Income by the Income Method?",
+        "options": ["मजदूरी, ब्याज, किराया, लाभ", "उत्पादन", "खर्च", "Depreciation"],
+        "options_en": ["Wages, interest, rent, profit", "Production", "Expenditure", "Depreciation"],
+        "answer": 0,
+        "explanation": "Income Method = सभी factor incomes का योग। Trick: WIRP (Wage, Interest, Rent, Profit)।",
+        "explanation_en": "Income Method = Sum of all factor incomes. Trick: WIRP (Wage, Interest, Rent, Profit)."
+    },
+    {
+        "q": "Expenditure Method में क्या गिना जाता है?",
+        "q_en": "What is calculated in the Expenditure Method?",
+        "options": ["मजदूरी", "सभी Final Consumption + Investment + Govt Expenditure + Net Export", "उत्पादन लागत", "Depreciation"],
+        "options_en": ["Wages", "All Final Consumption + Investment + Govt Expenditure + Net Export", "Production cost", "Depreciation"],
+        "answer": 1,
+        "explanation": "Expenditure Method = Y = C + I + G + (X–M)।",
+        "explanation_en": "Expenditure Method = Y = C + I + G + (X–M)."
+    },
+    {
+        "q": "Production Method को और किस नाम से जाना जाता है?",
+        "q_en": "By what other name is the Production Method known?",
+        "options": ["Value Added Method", "Income Method", "Expenditure Method", "Price Method"],
+        "options_en": ["Value Added Method", "Income Method", "Expenditure Method", "Price Method"],
+        "answer": 0,
+        "explanation": "इसमें प्रत्येक चरण पर Value Addition को जोड़ा जाता है।",
+        "explanation_en": "It involves adding the value addition at each stage."
+    },
+    {
+        "q": "भारत की National Income के सबसे बड़े योगदानकर्ता सेक्टर कौन सा है (2024–25)?",
+        "q_en": "Which sector is the largest contributor to India's National Income in 2024–25?",
+        "options": ["Primary", "Secondary", "Tertiary", "Mining"],
+        "options_en": ["Primary", "Secondary", "Tertiary", "Mining"],
+        "answer": 2,
+        "explanation": "Service Sector का योगदान लगभग 60%।",
+        "explanation_en": "The Service Sector contributes approximately 60%."
+    },
+    {
+        "q": "GDP Deflator क्या होता है?",
+        "q_en": "What is the GDP Deflator?",
+        "options": ["Tax का Ratio", "Price Index = (Nominal GDP / Real GDP) × 100", "आय का विभाजन", "Foreign Trade Ratio"],
+        "options_en": ["Tax Ratio", "Price Index = (Nominal GDP / Real GDP) × 100", "Income division", "Foreign Trade Ratio"],
+        "answer": 1,
+        "explanation": "यह मापता है कि GDP में Price change कितना है।",
+        "explanation_en": "It measures the price change in GDP."
+    },
+    {
+        "q": "भारत में सबसे पहले National Income का अनुमान किसने लगाया?",
+        "q_en": "Who first estimated National Income in India?",
+        "options": ["दादाभाई नौरोजी", "महालनोबिस", "CSO", "विश्व बैंक"],
+        "options_en": ["Dadabhai Naoroji", "Mahalanobis", "CSO", "World Bank"],
+        "answer": 0,
+        "explanation": "1868 में दादाभाई नौरोजी ने 'Poverty and Un-British Rule in India' में आय का पहला अनुमान दिया।",
+        "explanation_en": "In 1868, Dadabhai Naoroji provided the first estimate of income in 'Poverty and Un-British Rule in India'."
+    },
+    {
+        "q": "भारत का पहला आधिकारिक National Income Estimate कब प्रकाशित हुआ?",
+        "q_en": "When was India's first official National Income Estimate published?",
+        "options": ["1947", "1950", "1951", "1960"],
+        "options_en": ["1947", "1950", "1951", "1960"],
+        "answer": 1,
+        "explanation": "स्वतंत्रता के बाद 1950 में पहला official estimate आया।",
+        "explanation_en": "The first official estimate was published in 1950 after independence."
+    },
+    {
+        "q": "Per Capita Income कैसे निकाली जाती है?",
+        "q_en": "How is Per Capita Income calculated?",
+        "options": ["National Income ÷ Population", "GDP ÷ Import", "Export ÷ Population", "Tax ÷ Population"],
+        "options_en": ["National Income ÷ Population", "GDP ÷ Import", "Export ÷ Population", "Tax ÷ Population"],
+        "answer": 0,
+        "explanation": "Per Capita = Average income प्रति व्यक्ति।",
+        "explanation_en": "Per Capita = Average income per person."
+    },
+    {
+        "q": "Green GDP किसे कहते हैं?",
+        "q_en": "What is Green GDP?",
+        "options": ["Agricultural GDP", "Environmental cost घटाकर GDP", "Nominal GDP", "Real GDP"],
+        "options_en": ["Agricultural GDP", "GDP minus environmental cost", "Nominal GDP", "Real GDP"],
+        "answer": 1,
+        "explanation": "Green GDP = Sustainable Development को ध्यान में रखकर।",
+        "explanation_en": "Green GDP = Accounts for sustainable development."
+    },
+    {
+        "q": "भारत में राष्ट्रीय आय का सबसे बड़ा भाग किस पर खर्च होता है?",
+        "q_en": "What is the largest portion of India's National Income spent on?",
+        "options": ["कृषि", "उपभोग (Consumption)", "निवेश", "Export"],
+        "options_en": ["Agriculture", "Consumption", "Investment", "Export"],
+        "answer": 1,
+        "explanation": "भारत की अधिकांश आय consumption पर खर्च होती है (~60%)।",
+        "explanation_en": "Most of India's income is spent on consumption (~60%)."
+    },
+    {
+        "q": "राष्ट्रीय आय के आँकड़े मुख्य रूप से किसलिए उपयोग होते हैं?",
+        "q_en": "What are National Income statistics primarily used for?",
+        "options": ["चुनाव कराने के लिए", "आर्थिक प्रगति मापने के लिए", "जनगणना के लिए", "खेल आयोजन के लिए"],
+        "options_en": ["Conducting elections", "Measuring economic progress", "Census", "Sports events"],
+        "answer": 1,
+        "explanation": "National Income = Economy का growth indicator।",
+        "explanation_en": "National Income = Indicator of economic growth."
+    },
+    {
+        "q": "भारत की प्रति व्यक्ति आय (2024–25, अनुमानित) लगभग कितनी है?",
+        "q_en": "What is India's estimated Per Capita Income in 2024–25?",
+        "options": ["₹50,000", "₹1,50,000", "₹1,80,000", "₹2,00,000"],
+        "options_en": ["₹50,000", "₹1,50,000", "₹1,80,000", "₹2,00,000"],
+        "answer": 2,
+        "explanation": "Economic Survey 2024–25 के अनुसार।",
+        "explanation_en": "According to the Economic Survey 2024–25."
+    },
+    {
+        "q": "National Income का सबसे reliable indicator कौन सा है?",
+        "q_en": "What is the most reliable indicator of National Income?",
+        "options": ["GDP", "NNP at Factor Cost", "GNP at Market Price", "Disposable Income"],
+        "options_en": ["GDP", "NNP at Factor Cost", "GNP at Market Price", "Disposable Income"],
+        "answer": 1,
+        "explanation": "NNP at Factor Cost = Net National Income = National Income का सही मापक।",
+        "explanation_en": "NNP at Factor Cost = Net National Income = The true measure of National Income."
+    },
+    {
+        "q": "Factor Cost और Market Price में अंतर क्यों होता है?",
+        "q_en": "Why is there a difference between Factor Cost and Market Price?",
+        "options": ["Subsidy और Tax की वजह से", "Population की वजह से", "Import–Export की वजह से", "Depreciation की वजह से"],
+        "options_en": ["Due to subsidy and tax", "Due to population", "Due to import-export", "Due to depreciation"],
+        "answer": 0,
+        "explanation": "Market Price = Factor Cost + Indirect Tax – Subsidy।",
+        "explanation_en": "Market Price = Factor Cost + Indirect Tax – Subsidy."
+    },
+    {
+        "q": "Disposable Income किसे कहते हैं?",
+        "q_en": "What is Disposable Income?",
+        "options": ["National Income – Tax + Transfer Payments", "GDP – Depreciation", "GNP – Tax", "Income – Subsidy"],
+        "options_en": ["National Income – Tax + Transfer Payments", "GDP – Depreciation", "GNP – Tax", "Income – Subsidy"],
+        "answer": 0,
+        "explanation": "Individual या परिवार के पास खर्च/बचत के लिए बची हुई आय।",
+        "explanation_en": "Income left with individuals or families for spending/saving."
+    },
+    {
+        "q": "Personal Income और National Income में क्या फर्क है?",
+        "q_en": "What is the difference between Personal Income and National Income?",
+        "options": ["Personal Income = National Income – Corporate Tax – Undistributed Profit + Transfer Payments", "दोनों एक समान", "Personal Income = केवल मजदूरी", "कोई अंतर नहीं"],
+        "options_en": ["Personal Income = National Income – Corporate Tax – Undistributed Profit + Transfer Payments", "Both are the same", "Personal Income = Only wages", "No difference"],
+        "answer": 0,
+        "explanation": "Personal Income = NI से Corporate Tax व Undistributed Profit घटाकर + Transfer Payments जोड़कर।",
+        "explanation_en": "Personal Income = National Income minus Corporate Tax and Undistributed Profit plus Transfer Payments."
+    },
+    {
+        "q": "भारत में सबसे तेजी से बढ़ता हुआ सेक्टर कौन सा है?",
+        "q_en": "Which is the fastest-growing sector in India?",
+        "options": ["Agriculture", "Industry", "Services (IT, Banking, Communication)", "Mining"],
+        "options_en": ["Agriculture", "Industry", "Services (IT, Banking, Communication)", "Mining"],
+        "answer": 2,
+        "explanation": "Service Sector सबसे तेजी से बढ़ता और GDP में सबसे बड़ा योगदान देता है।",
+        "explanation_en": "The Service Sector is the fastest-growing and contributes the most to GDP."
+    },
+    {
+        "q": "राष्ट्रीय आय बढ़ाने का सबसे प्रभावी तरीका क्या है?",
+        "q_en": "What is the most effective way to increase National Income?",
+        "options": ["Tax बढ़ाना", "उत्पादन और निवेश बढ़ाना", "Import बढ़ाना", "जनसंख्या घटाना"],
+        "options_en": ["Increasing taxes", "Increasing production and investment", "Increasing imports", "Reducing population"],
+        "answer": 1,
+        "explanation": "Income बढ़ाने के लिए production capacity और capital formation सबसे ज़रूरी है।",
+        "explanation_en": "Increasing production capacity and capital formation are most essential for increasing income."
+    },
+
+    {
+        "q": "National Income की गणना भारत में कौन करता है?",
+        "q_en": "Who calculates National Income in India?",
+        "options": ["NITI Aayog", "RBI", "CSO (Central Statistical Organisation)", "Planning Commission"],
+        "options_en": ["NITI Aayog", "RBI", "CSO (Central Statistical Organisation)", "Planning Commission"],
+        "answer": 2,
+        "explanation": "1955 से भारत में राष्ट्रीय आय की गणना CSO (अब NSO – National Statistical Office) करता है। Trick: Income का हिसाब किताब – CSO/NSO के पास।",
+        "explanation_en": "Since 1955, National Income in India is calculated by CSO (now NSO – National Statistical Office). Trick: Income accounts – with CSO/NSO."
+    },
+    {
+        "q": "भारत में National Income की गणना किस विधि से होती है?",
+        "q_en": "Which method is used to calculate National Income in India?",
+        "options": ["Income Method", "Expenditure Method", "Production Method", "उपरोक्त सभी"],
+        "options_en": ["Income Method", "Expenditure Method", "Production Method", "All of the above"],
+        "answer": 3,
+        "explanation": "भारत में मिश्रित पद्धति (Mixed Method) अपनाई जाती है। Trick: National Income = Income + Expenditure + Production → Mix.",
+        "explanation_en": "India uses a mixed method for National Income calculation. Trick: National Income = Income + Expenditure + Production → Mix."
+    },
+    {
+        "q": "‘Green GDP’ किसे कहते हैं?",
+        "q_en": "What is Green GDP?",
+        "options": ["कृषि GDP", "पर्यावरणीय हानि घटाकर GDP", "जैविक उत्पादन GDP", "केवल ग्रामीण GDP"],
+        "options_en": ["Agricultural GDP", "GDP minus environmental cost", "Organic production GDP", "Only rural GDP"],
+        "answer": 1,
+        "explanation": "Green GDP = GDP – Environmental Cost. Trick: Green मतलब Nature = Pollution घटाकर GDP.",
+        "explanation_en": "Green GDP = GDP minus environmental cost. Trick: Green means Nature = GDP minus pollution."
+    },
+    {
+        "q": "GDP Deflator क्या है?",
+        "q_en": "What is the GDP Deflator?",
+        "options": ["कृषि उत्पादन का सूचकांक", "आय और व्यय का अनुपात", "Nominal GDP ÷ Real GDP × 100", "Per Capita Income"],
+        "options_en": ["Agricultural production index", "Income and expenditure ratio", "Nominal GDP ÷ Real GDP × 100", "Per Capita Income"],
+        "answer": 2,
+        "explanation": "GDP Deflator = महँगाई को दर्शाता है। Trick: Nominal ÷ Real = Deflator.",
+        "explanation_en": "GDP Deflator indicates inflation. Trick: Nominal ÷ Real = Deflator."
+    },
+    {
+        "q": "Per Capita Income (PCI) कैसे निकाला जाता है?",
+        "q_en": "How is Per Capita Income (PCI) calculated?",
+        "options": ["National Income ÷ Population", "GDP ÷ State Population", "Income Tax ÷ Population", "Net Exports ÷ Population"],
+        "options_en": ["National Income ÷ Population", "GDP ÷ State Population", "Income Tax ÷ Population", "Net Exports ÷ Population"],
+        "answer": 0,
+        "explanation": "प्रति व्यक्ति औसत आय। Trick: Income ÷ इंसान = PCI.",
+        "explanation_en": "Average income per person. Trick: Income ÷ People = PCI."
+    },
+    {
+        "q": "RBI की स्थापना कब हुई?",
+        "q_en": "When was the RBI established?",
+        "options": ["1929", "1935", "1947", "1951"],
+        "options_en": ["1929", "1935", "1947", "1951"],
+        "answer": 1,
+        "explanation": "RBI Act 1934 के तहत 1 अप्रैल 1935 को स्थापना हुई। Trick: 1934 का Act – 1935 में Fact.",
+        "explanation_en": "Established on April 1, 1935, under the RBI Act 1934. Trick: 1934 Act – 1935 Fact."
+    },
+    {
+        "q": "RBI का राष्ट्रीयकरण कब हुआ?",
+        "q_en": "When was the RBI nationalized?",
+        "options": ["1947", "1949", "1950", "1955"],
+        "options_en": ["1947", "1949", "1950", "1955"],
+        "answer": 1,
+        "explanation": "1 जनवरी 1949 को RBI का राष्ट्रीयकरण हुआ। Trick: RBI + 1949 = राष्ट्रीयकरण।",
+        "explanation_en": "RBI was nationalized on January 1, 1949. Trick: RBI + 1949 = Nationalization."
+    },
+    {
+        "q": "RBI का मुख्यालय कहाँ है?",
+        "q_en": "Where is the headquarters of RBI?",
+        "options": ["नई दिल्ली", "कोलकाता", "मुंबई", "चेन्नई"],
+        "options_en": ["New Delhi", "Kolkata", "Mumbai", "Chennai"],
+        "answer": 2,
+        "explanation": "शुरुआत कोलकाता में थी, बाद में मुंबई शिफ्ट हुआ। Trick: Money = Mumbai = RBI.",
+        "explanation_en": "Initially in Kolkata, later shifted to Mumbai. Trick: Money = Mumbai = RBI."
+    },
+    {
+        "q": "RBI का प्रतीक चिन्ह (Emblem) क्या है?",
+        "q_en": "What is the emblem of RBI?",
+        "options": ["शेर और चक्र", "शेर और ताड़ का पेड़", "बाघ और ताड़ का पेड़", "शेर और पहाड़"],
+        "options_en": ["Lion and Wheel", "Lion and Palm Tree", "Tiger and Palm Tree", "Lion and Mountain"],
+        "answer": 2,
+        "explanation": "यह East India Company के सिक्कों से लिया गया। Trick: Tiger + Palm = RBI.",
+        "explanation_en": "Derived from East India Company coins. Trick: Tiger + Palm = RBI."
+    },
+    {
+        "q": "RBI के पहले गवर्नर कौन थे?",
+        "q_en": "Who was the first Governor of RBI?",
+        "options": ["C.D. Deshmukh", "Osborne Smith", "Benegal Rama Rau", "Manmohan Singh"],
+        "options_en": ["C.D. Deshmukh", "Osborne Smith", "Benegal Rama Rau", "Manmohan Singh"],
+        "answer": 1,
+        "explanation": "पहले भारतीय गवर्नर – C.D. Deshmukh (1943)। Trick: पहला विदेशी – Smith, पहला भारतीय – Deshmukh.",
+        "explanation_en": "First Indian Governor – C.D. Deshmukh (1943). Trick: First foreigner – Smith, first Indian – Deshmukh."
+    },
+    {
+        "q": "RBI का मुख्य कार्य क्या है?",
+        "q_en": "What is the main function of RBI?",
+        "options": ["मुद्रा छापना", "बैंकिंग नियमन", "मौद्रिक स्थिरता", "उपरोक्त सभी"],
+        "options_en": ["Printing currency", "Banking regulation", "Monetary stability", "All of the above"],
+        "answer": 3,
+        "explanation": "RBI का कार्य = Currency Issue + Control + Regulation. Trick: RBI = Money + Regulation + Stability.",
+        "explanation_en": "RBI's functions = Currency issuance + Control + Regulation. Trick: RBI = Money + Regulation + Stability."
+    },
+    {
+        "q": "भारत में मौद्रिक नीति कौन बनाता है?",
+        "q_en": "Who makes monetary policy in India?",
+        "options": ["सरकार", "संसद", "RBI", "Planning Commission"],
+        "options_en": ["Government", "Parliament", "RBI", "Planning Commission"],
+        "answer": 2,
+        "explanation": "RBI का मुख्य कार्य Monetary Policy बनाना है। Trick: Money = Monetary = RBI.",
+        "explanation_en": "RBI's main function is to formulate monetary policy. Trick: Money = Monetary = RBI."
+    },
+    {
+        "q": "Repo Rate का मतलब क्या है?",
+        "q_en": "What does Repo Rate mean?",
+        "options": ["बैंक से RBI कर्ज लेता है", "RBI से बैंक कर्ज लेते हैं", "बैंक से जनता कर्ज लेती है", "जनता से सरकार कर्ज लेती है"],
+        "options_en": ["RBI borrows from banks", "Banks borrow from RBI", "Public borrows from banks", "Government borrows from public"],
+        "answer": 1,
+        "explanation": "Repo = Short-term borrowing by banks from RBI. Trick: Repo = Bank → RBI से Loan.",
+        "explanation_en": "Repo = Short-term borrowing by banks from RBI. Trick: Repo = Bank → Loan from RBI."
+    },
+    {
+        "q": "Reverse Repo Rate का मतलब?",
+        "q_en": "What does Reverse Repo Rate mean?",
+        "options": ["RBI से बैंक उधार लेते हैं", "बैंक RBI में पैसा जमा करते हैं", "जनता से सरकार कर्ज लेती है", "विदेशी बैंक भारत को कर्ज देते हैं"],
+        "options_en": ["Banks borrow from RBI", "Banks deposit money with RBI", "Government borrows from public", "Foreign banks lend to India"],
+        "answer": 1,
+        "explanation": "Reverse = उल्टा = बैंक RBI को पैसा देते हैं। Trick: Reverse = पैसा RBI के पास।",
+        "explanation_en": "Reverse = Opposite = Banks deposit money with RBI. Trick: Reverse = Money to RBI."
+    },
+    {
+        "q": "CRR (Cash Reserve Ratio) क्या है?",
+        "q_en": "What is CRR (Cash Reserve Ratio)?",
+        "options": ["बैंक का कुल पूँजी अनुपात", "RBI के पास जमा नकद प्रतिशत", "बैंक द्वारा दिया जाने वाला कर्ज", "विदेशी मुद्रा भंडार"],
+        "options_en": ["Bank's total capital ratio", "Percentage of cash deposited with RBI", "Loans given by banks", "Foreign exchange reserves"],
+        "answer": 1,
+        "explanation": "हर बैंक को अपने जमा का कुछ प्रतिशत RBI के पास रखना होता है। Trick: Cash = RBI में Reserve.",
+        "explanation_en": "Every bank must keep a percentage of its deposits with RBI. Trick: Cash = Reserve with RBI."
+    },
+    {
+        "q": "SLR (Statutory Liquidity Ratio) क्या है?",
+        "q_en": "What is SLR (Statutory Liquidity Ratio)?",
+        "options": ["RBI को नकद देना", "सरकार के पास सोना और बॉन्ड रखना", "बैंक द्वारा अपने पास सोना, नकद या सरकारी बॉन्ड रखना", "विदेशी बैंकों को कर्ज"],
+        "options_en": ["Cash to RBI", "Gold and bonds with government", "Gold, cash, or government bonds held by banks", "Loans to foreign banks"],
+        "answer": 2,
+        "explanation": "CRR = RBI में, SLR = बैंक के पास। Trick: SLR = Security bank के पास.",
+        "explanation_en": "CRR = With RBI, SLR = With banks. Trick: SLR = Security with bank."
+    },
+    {
+        "q": "भारत में मुद्रास्फीति (Inflation) कौन मापता है?",
+        "q_en": "Who measures inflation in India?",
+        "options": ["RBI", "CSO", "Labour Bureau", "NITI Aayog"],
+        "options_en": ["RBI", "CSO", "Labour Bureau", "NITI Aayog"],
+        "answer": 2,
+        "explanation": "CPI & WPI का हिसाब Labour Bureau और CSO रखते हैं। Trick: Price Index = Labour का काम।",
+        "explanation_en": "CPI & WPI are calculated by Labour Bureau and CSO. Trick: Price Index = Labour's job."
+    },
+    {
+        "q": "भारत में ‘Inflation Targeting’ किसके द्वारा तय होती है?",
+        "q_en": "Who sets Inflation Targeting in India?",
+        "options": ["संसद", "RBI + सरकार", "NITI Aayog", "Planning Commission"],
+        "options_en": ["Parliament", "RBI + Government", "NITI Aayog", "Planning Commission"],
+        "answer": 1,
+        "explanation": "2016 से MPC (Monetary Policy Committee) Inflation Target तय करती है। Trick: MPC = RBI + Govt.",
+        "explanation_en": "Since 2016, the MPC (Monetary Policy Committee) sets the inflation target. Trick: MPC = RBI + Govt."
+    },
+    {
+        "q": "भारत में वर्तमान में Inflation Target कितनी है?",
+        "q_en": "What is the current Inflation Target in India?",
+        "options": ["2% ± 1", "4% ± 2", "6% ± 2", "5% ± 1"],
+        "options_en": ["2% ± 1", "4% ± 2", "6% ± 2", "5% ± 1"],
+        "answer": 1,
+        "explanation": "2016 में 4% ± 2% तय किया गया। Trick: Target = 4 ± 2.",
+        "explanation_en": "Set at 4% ± 2% in 2016. Trick: Target = 4 ± 2."
+    },
+    {
+        "q": "NPA (Non Performing Asset) कब कहलाता है?",
+        "q_en": "When is an asset called an NPA (Non Performing Asset)?",
+        "options": ["30 दिन तक कर्ज न चुका पाने पर", "60 दिन तक कर्ज न चुका पाने पर", "90 दिन तक कर्ज न चुका पाने पर", "120 दिन तक कर्ज न चुका पाने पर"],
+        "options_en": ["30 days of non-repayment", "60 days of non-repayment", "90 days of non-repayment", "120 days of non-repayment"],
+        "answer": 2,
+        "explanation": "Loan 90 दिन तक न मिलने पर NPA कहलाता है। Trick: 3 Month = NPA.",
+        "explanation_en": "A loan becomes an NPA if not repaid for 90 days. Trick: 3 Month = NPA."
+    },
+    {
+        "q": "भारत का पहला बैंक कौन था?",
+        "q_en": "Which was the first bank in India?",
+        "options": ["SBI", "Bank of Hindustan", "Punjab National Bank", "Allahabad Bank"],
+        "options_en": ["SBI", "Bank of Hindustan", "Punjab National Bank", "Allahabad Bank"],
+        "answer": 1,
+        "explanation": "1770 में Bank of Hindustan (कलकत्ता)। Trick: पहला बैंक = Hindustan.",
+        "explanation_en": "Bank of Hindustan in 1770 (Calcutta). Trick: First bank = Hindustan."
+    },
+    {
+        "q": "भारतीय स्टेट बैंक (SBI) का गठन कब हुआ?",
+        "q_en": "When was the State Bank of India (SBI) formed?",
+        "options": ["1935", "1949", "1955", "1969"],
+        "options_en": ["1935", "1949", "1955", "1969"],
+        "answer": 2,
+        "explanation": "Imperial Bank of India को मिलाकर 1955 में SBI बना। Trick: Imperial → State Bank 1955.",
+        "explanation_en": "SBI was formed in 1955 by merging the Imperial Bank of India. Trick: Imperial → State Bank 1955."
+    },
+    {
+        "q": "बैंक राष्ट्रीयकरण की पहली लहर कब हुई?",
+        "q_en": "When was the first wave of bank nationalization in India?",
+        "options": ["1949", "1955", "1969", "1980"],
+        "options_en": ["1949", "1955", "1969", "1980"],
+        "answer": 2,
+        "explanation": "इंदिरा गाँधी सरकार ने 14 प्रमुख बैंकों का राष्ट्रीयकरण किया। Trick: Indira = 1969 = 14 Banks.",
+        "explanation_en": "The Indira Gandhi government nationalized 14 major banks. Trick: Indira = 1969 = 14 Banks."
+    },
+    {
+        "q": "बैंक राष्ट्रीयकरण की दूसरी लहर कब हुई?",
+        "q_en": "When was the second wave of bank nationalization in India?",
+        "options": ["1975", "1980", "1985", "1991"],
+        "options_en": ["1975", "1980", "1985", "1991"],
+        "answer": 1,
+        "explanation": "दूसरी बार 6 और बैंकों का राष्ट्रीयकरण हुआ। Trick: Second → 1980 → 6 Banks.",
+        "explanation_en": "Six more banks were nationalized in the second wave. Trick: Second → 1980 → 6 Banks."
+    },
+    {
+        "q": "भारत में ‘Payment Banks’ की शुरुआत कब हुई?",
+        "q_en": "When did ‘Payment Banks’ start in India?",
+        "options": ["2012", "2014", "2015", "2018"],
+        "options_en": ["2012", "2014", "2015", "2018"],
+        "answer": 2,
+        "explanation": "RBI ने 2015 में Payment Banks की अनुमति दी (पहला Airtel Payment Bank)। Trick: 2015 = Pay Bank Start.",
+        "explanation_en": "RBI permitted Payment Banks in 2015 (first was Airtel Payment Bank). Trick: 2015 = Pay Bank Start."
+    }
+
 ];
 
         let selectedAnswers = new Array(questions.length).fill(null);
@@ -1531,82 +1689,118 @@
             loadDashboard();
         }
 
-        function loadDashboard() {
-            const totalQuestions = questions.length;
-            const attempted = selectedAnswers.filter(a => a !== null && a !== -1).length;
-            const unattempted = totalQuestions - attempted;
-            const correct = score;
-            const wrong = attempted - correct;
-            const scorePercentage = (correct / totalQuestions * 100).toFixed(1) || 0;
-           const totalMarks = `${totalQuestions} / ${correct}`; // 1 mark per question
-
-            const totalTime = formatTime(totalSeconds);
-            const avgTimePerQuestion = (totalSeconds / attempted).toFixed(1) || 0;
-            const speed = (attempted / (totalSeconds / 60)).toFixed(1) || 0;
-            const accuracy = (correct / attempted * 100).toFixed(1) || 0;
-            const efficiency = accuracy > 80 ? 'High' : accuracy > 60 ? 'Medium' : 'Low';
-            const percentile = accuracy > 90 ? 'Top 15%' : accuracy > 70 ? 'Top 30%' : 'Top 50%';
-            const rank = Math.floor(Math.random() * 280) + 1; // Placeholder
-            let longestStreak = 0;
-            let currentStreak = 0;
-            selectedAnswers.forEach((answer, i) => {
-                if (answer === questions[i].answer) {
-                    currentStreak++;
-                    longestStreak = Math.max(longestStreak, currentStreak);
-                } else {
-                    currentStreak = 0;
-                }
-            });
-            const bestSection = 'History (100%)'; // Static as per quiz context
-            const weakSection = 'N/A'; // Placeholder
-            const improvement = accuracy > 80 ? '+5%' : '+2%'; // Placeholder
-            const performanceLevel = accuracy > 80 ? 'Advanced' : accuracy > 60 ? 'Intermediate' : 'Beginner';
-            const medals = accuracy > 80 ? 'Accuracy Master' : 'N/A'; // Placeholder
-            const efficiencyScore = (accuracy * 0.9).toFixed(0); // Placeholder
-            const predictedScore = (scorePercentage * 1.02).toFixed(1); // Placeholder
-            const fastestAnswer = answerTimes.filter(t => t).length ? Math.min(...answerTimes.filter(t => t).map(t => t.time)).toFixed(0) : 'N/A';
-            const slowestAnswer = answerTimes.filter(t => t).length ? Math.max(...answerTimes.filter(t => t).map(t => t.time)).toFixed(0) : 'N/A';
-            const avgTimeCorrect = answerTimes.filter(t => t && t.correct).length ? (answerTimes.filter(t => t && t.correct).reduce((sum, t) => sum + t.time, 0) / answerTimes.filter(t => t && t.correct).length).toFixed(1) : 'N/A';
-            const avgTimeWrong = answerTimes.filter(t => t && !t.correct).length ? (answerTimes.filter(t => t && !t.correct).reduce((sum, t) => sum + t.time, 0) / answerTimes.filter(t => t && !t.correct).length).toFixed(1) : 'N/A';
-            const timeEfficiency = (1 - totalSeconds / (totalQuestions * 30)).toFixed(2); // Placeholder
-            const guessRate = wrong > 0 ? ((wrong / attempted) * 100).toFixed(1) : 0;
-            const firstHalfAccuracy = selectedAnswers.slice(0, Math.ceil(totalQuestions / 2)).filter((a, i) => a === questions[i].answer).length / Math.ceil(totalQuestions / 2) * 100 || 0;
-
-            const dashboardGrid = document.getElementById('dashboardGrid');
-            dashboardGrid.innerHTML = `
-                <div class="dash-box"><h4>Total Questions</h4><p>${totalQuestions}</p></div>
-                <div class="dash-box"><h4>Attempted</h4><p>${attempted}</p></div>
-                <div class="dash-box"><h4>Unattempted</h4><p>${unattempted}</p></div>
-                <div class="dash-box"><h4>Correct</h4><p>${correct}</p></div>
-                <div class="dash-box"><h4>Wrong</h4><p>${wrong}</p></div>
-                <div class="dash-box"><h4>Score</h4><p>${scorePercentage}%</p></div>
-                <div class="dash-box"><h4>Total Marks</h4><p>${totalMarks}</p></div>
-                <div class="dash-box"><h4>Total Time</h4><p>${totalTime}</p></div>
-                <div class="dash-box"><h4>Avg Time/Q</h4><p>${avgTimePerQuestion} sec</p></div>
-                <div class="dash-box"><h4>Speed</h4><p>${speed} Q/min</p></div>
-                <div class="dash-box"><h4>Accuracy</h4><p>${accuracy}%</p></div>
-                <div class="dash-box"><h4>Efficiency</h4><p>${efficiency}</p></div>
-                <div class="dash-box"><h4>Percentile</h4><p>${percentile}</p></div>
-                <div class="dash-box"><h4>Rank</h4><p>${rank} / 1</p></div>
-                <div class="dash-box"><h4>Longest Streak</h4><p>${longestStreak} Qs</p></div>
-                <div class="dash-box"><h4>Best Section</h4><p>${bestSection}</p></div>
-                <div class="dash-box"><h4>Weak Section</h4><p>${weakSection}</p></div>
-                <div class="dash-box"><h4>Improvement</h4><p>${improvement}</p></div>
-                <div class="dash-box"><h4>Performance Level</h4><p>${performanceLevel}</p></div>
-                <div class="dash-box"><h4>Medals</h4><p>${medals}</p></div>
-                <div class="dash-box"><h4>Efficiency Score</h4><p>${efficiencyScore}</p></div>
-                <div class="dash-box"><h4>Predicted Score</h4><p>${predictedScore}%</p></div>
-                <div class="dash-box"><h4>Questions/Min</h4><p>${speed} Q/min</p></div>
-                <div class="dash-box"><h4>Fastest Answer</h4><p>${fastestAnswer} sec</p></div>
-                <div class="dash-box"><h4>Slowest Answer</h4><p>${slowestAnswer} sec</p></div>
-                <div class="dash-box"><h4>Avg Time Correct</h4><p>${avgTimeCorrect} sec</p></div>
-                <div class="dash-box"><h4>Avg Time Wrong</h4><p>${avgTimeWrong} sec</p></div>
-                <div class="dash-box"><h4>Time Efficiency</h4><p>${timeEfficiency}</p></div>
-                <div class="dash-box"><h4>Guess Rate</h4><p>${guessRate}%</p></div>
-                <div class="dash-box"><h4>First-Half Accuracy</h4><p>${firstHalfAccuracy.toFixed(1)}%</p></div>
-            `;
+      function loadDashboard() {
+    const totalQuestions = questions.length;
+    const attempted = selectedAnswers.filter(a => a !== null && a !== -1).length;
+    const unattempted = totalQuestions - attempted;
+    const correct = score;
+    const wrong = attempted - correct;
+    const scorePercentage = (correct / totalQuestions * 100).toFixed(1) || 0;
+    const totalMarks = `${totalQuestions * 20} / ${correct * 20}`; // Assuming 20 marks per question
+    const totalTime = formatTime(totalSeconds);
+    const avgTimePerQuestion = (totalSeconds / attempted).toFixed(1) || 0;
+    const speed = (attempted / (totalSeconds / 60)).toFixed(1) || 0;
+    const accuracy = (correct / attempted * 100).toFixed(1) || 0;
+    const efficiency = accuracy > 80 ? 'High' : accuracy > 60 ? 'Medium' : 'Low';
+    const percentile = accuracy > 90 ? 'Top 15%' : accuracy > 70 ? 'Top 30%' : 'Top 50%';
+    const rank = Math.floor(Math.random() * 280) + 1; // Placeholder
+    let longestStreak = 0;
+    let currentStreak = 0;
+    selectedAnswers.forEach((answer, i) => {
+        if (answer === questions[i].answer) {
+            currentStreak++;
+            longestStreak = Math.max(longestStreak, currentStreak);
+        } else {
+            currentStreak = 0;
         }
+    });
+    const bestSection = 'History (100%)'; // Static as per quiz context
+    const weakSection = 'N/A'; // Placeholder
+    const improvement = accuracy > 80 ? '+5%' : '+2%'; // Placeholder
+    const performanceLevel = accuracy > 80 ? 'Advanced' : accuracy > 60 ? 'Intermediate' : 'Beginner';
+    const medals = accuracy > 80 ? 'Accuracy Master' : 'N/A'; // Placeholder
+    const efficiencyScore = (accuracy * 0.9).toFixed(0); // Placeholder
+    const predictedScore = (scorePercentage * 1.02).toFixed(1); // Placeholder
+    const fastestAnswer = answerTimes.filter(t => t).length ? Math.min(...answerTimes.filter(t => t).map(t => t.time)).toFixed(0) : 'N/A';
+    const slowestAnswer = answerTimes.filter(t => t).length ? Math.max(...answerTimes.filter(t => t).map(t => t.time)).toFixed(0) : 'N/A';
+    const avgTimeCorrect = answerTimes.filter(t => t && t.correct).length ? (answerTimes.filter(t => t && t.correct).reduce((sum, t) => sum + t.time, 0) / answerTimes.filter(t => t && t.correct).length).toFixed(1) : 'N/A';
+    const avgTimeWrong = answerTimes.filter(t => t && !t.correct).length ? (answerTimes.filter(t => t && !t.correct).reduce((sum, t) => sum + t.time, 0) / answerTimes.filter(t => t && !t.correct).length).toFixed(1) : 'N/A';
+    const timeEfficiency = (1 - totalSeconds / (totalQuestions * 30)).toFixed(2); // Placeholder
+    const guessRate = wrong > 0 ? ((wrong / attempted) * 100).toFixed(1) : 0;
+    const firstHalfAccuracy = selectedAnswers.slice(0, Math.ceil(totalQuestions / 2)).filter((a, i) => a === questions[i].answer).length / Math.ceil(totalQuestions / 2) * 100 || 0;
 
+    // Generate HTML for time per question (hidden initially)
+    let questionTimesHTML = '<ul>';
+    for (let i = 0; i < totalQuestions; i++) {
+        const at = answerTimes[i];
+        const time = at ? at.time.toFixed(1) : 'N/A';
+        questionTimesHTML += `<li>Q${i+1}: ${time} sec</li>`;
+    }
+    questionTimesHTML += '</ul>';
+
+    const dashboardGrid = document.getElementById('dashboardGrid');
+    dashboardGrid.innerHTML = `
+        <div class="dash-box"><h4>Total Questions</h4><p>${totalQuestions}</p></div>
+        <div class="dash-box"><h4>Attempted</h4><p>${attempted}</p></div>
+        <div class="dash-box"><h4>Unattempted</h4><p>${unattempted}</p></div>
+        <div class="dash-box"><h4>Correct</h4><p>${correct}</p></div>
+        <div class="dash-box"><h4>Wrong</h4><p>${wrong}</p></div>
+        <div class="dash-box"><h4>Score</h4><p>${scorePercentage}%</p></div>
+        <div class="dash-box"><h4>Total Marks</h4><p>${totalMarks}</p></div>
+        <div class="dash-box"><h4>Total Time</h4><p>${totalTime}</p></div>
+        <div class="dash-box"><h4>Avg Time/Q</h4><p>${avgTimePerQuestion} sec</p></div>
+        <div class="dash-box"><h4>Speed</h4><p>${speed} Q/min</p></div>
+        <div class="dash-box"><h4>Accuracy</h4><p>${accuracy}%</p></div>
+        <div class="dash-box"><h4>Efficiency</h4><p>${efficiency}</p></div>
+        <div class="dash-box"><h4>Percentile</h4><p>${percentile}</p></div>
+        <div class="dash-box"><h4>Longest Streak</h4><p>${longestStreak} Qs</p></div>
+        <div class="dash-box"><h4>Weak Section</h4><p>${weakSection}</p></div>
+        <div class="dash-box"><h4>Improvement</h4><p>${improvement}</p></div>
+        <div class="dash-box"><h4>Performance Level</h4><p>${performanceLevel}</p></div>
+        <div class="dash-box"><h4>Medals</h4><p>${medals}</p></div>
+        <div class="dash-box"><h4>Efficiency Score</h4><p>${efficiencyScore}</p></div>
+        <div class="dash-box"><h4>Predicted Score</h4><p>${predictedScore}%</p></div>
+        <div class="dash-box"><h4>Questions/Min</h4><p>${speed} Q/min</p></div>
+        <div class="dash-box"><h4>Fastest Answer</h4><p>${fastestAnswer} sec</p></div>
+        <div class="dash-box"><h4>Slowest Answer</h4><p>${slowestAnswer} sec</p></div>
+        <div class="dash-box"><h4>Avg Time Correct</h4><p>${avgTimeCorrect} sec</p></div>
+        <div class="dash-box"><h4>Avg Time Wrong</h4><p>${avgTimeWrong} sec</p></div>
+        <div class="dash-box"><h4>Time Efficiency</h4><p>${timeEfficiency}</p></div>
+        <div class="dash-box"><h4>Guess Rate</h4><p>${guessRate}%</p></div>
+        <div class="dash-box"><h4>First-Half Accuracy</h4><p>${firstHalfAccuracy.toFixed(1)}%</p></div>
+        <div class="dash-box"><h4>Total Time on Submit</h4><p>${totalTime}</p></div>
+        <div class="dash-box"><h4>Show Time Details</h4><button onclick="toggleTimeDetails()">Show Times</button><div id="timeDetails" style="display:none;">${questionTimesHTML}</div></div>
+        
+        `;
+}
+
+// Function to toggle time details display
+function toggleTimeDetails() {
+    const timeDetails = document.getElementById('timeDetails');
+    timeDetails.style.display = timeDetails.style.display === 'none' ? 'block' : 'none';
+}
+
+// Function to export dashboard as PNG or PDF
+function exportDashboard() {
+    const dashboard = document.getElementById('dashboardGrid');
+    html2canvas(dashboard).then(canvas => {
+        const imgData = canvas.toDataURL('image/png');
+        
+        // Download as PNG
+        const link = document.createElement('a');
+        link.href = imgData;
+        link.download = 'dashboard.png';
+        link.click();
+        
+        // Convert to PDF
+        const pdf = new jsPDF('p', 'mm', 'a4');
+        const imgProps = pdf.getImageProperties(imgData);
+        const pdfWidth = pdf.internal.pageSize.getWidth();
+        const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
+        pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
+        pdf.save('dashboard.pdf');
+    });
+}
         // Initialize
         document.getElementById('timerContainer').addEventListener('dblclick', function() {
             this.classList.toggle('hidden');
@@ -1619,4 +1813,5 @@
         document.head.appendChild(link);
     </script>
 </body>
+
 </html>
